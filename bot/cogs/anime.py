@@ -1,41 +1,33 @@
 # bot/cogs/anime.py
 
-from discord import app_commands, Interaction
+import discord
+from discord import app_commands
 from discord.ext import commands
 import logging
 
-from .utils.base_cog import BaseAnimeCog
-from .utils.handlers import create_character_info
-from .utils.constants import CHARACTER_DESCRIPTIONS, CHARACTER_MAPPINGS
+from .base_cog import BaseAnimeCog
+from .utils.constants import VALID_SERIES, get_series_display_name
 
 logger = logging.getLogger('AnimeCogs')
 
+
 class AnimeCog(BaseAnimeCog):
-    """Combined cog for all anime/game characters"""
+    """Cog for static anime character images"""
 
     def __init__(self, bot: commands.Bot):
-        super().__init__(bot, "./images/")
-        self.load_all_characters()
+        super().__init__(bot, "./hentai/")
         self.character_group = app_commands.Group(
             name="character",
             description="Get character images"
         )
         self.register_slash_commands()
 
-    def load_all_characters(self):
-        """Load all character mappings with their unique descriptions"""
-        for source, characters in CHARACTER_DESCRIPTIONS.items():
-            for char_name, desc_data in characters.items():
-                mapping_data = CHARACTER_MAPPINGS[source]
-                char_info = create_character_info(char_name, source, desc_data, mapping_data)
-                self.characters[char_name] = char_info
-
     def register_slash_commands(self):
         """Register slash commands for all characters"""
         # Series choices
         series_choices = [
-            app_commands.Choice(name=name.replace('_', ' ').title(), value=name)
-            for name in CHARACTER_DESCRIPTIONS.keys()
+            app_commands.Choice(name=get_series_display_name(name), value=name)
+            for name in sorted(VALID_SERIES)
         ]
 
         @self.character_group.command(name="show")
@@ -45,38 +37,48 @@ class AnimeCog(BaseAnimeCog):
         )
         @app_commands.choices(series=series_choices)
         async def character_command(
-            interaction: Interaction,
-            series: str,
-            character_name: str
+                interaction: discord.Interaction,
+                series: str,
+                character_name: str
         ):
             """Get a character image from a specific series"""
-            # Get characters for the selected series
-            series_chars = {
-                name: info for name, info in self.characters.items()
-                if info.source.lower().replace(' ', '_') == series.lower()
-            }
+            # Identify character
+            series_name, char_key = self.character_manager.identify_character(character_name)
 
-            # Find the closest matching character
-            matched_char = None
-            search_name = character_name.lower()
-            for name, info in series_chars.items():
-                if (name.lower() == search_name or
-                    info.title.lower() == search_name or
-                    search_name in name.lower() or
-                    search_name in info.title.lower()):
-                    matched_char = info
-                    break
-
-            if matched_char:
-                await self.send_character_image(interaction, matched_char)
-            else:
-                # Get available characters for the error message
-                available_chars = "\n".join(f"• {info.title}" for info in series_chars.values())
+            # If character not found in specified series
+            if not char_key or series_name != series:
                 await interaction.response.send_message(
-                    f"Character '{character_name}' not found in {series.replace('_', ' ').title()}.\n\n"
-                    f"Available characters:\n{available_chars}",
+                    f"Character '{character_name}' not found in {get_series_display_name(series)}.\n\n"
+                    f"Available characters:\n{self.get_character_list(series)}",
                     ephemeral=True
                 )
+                return
+
+            # Get character info and send image
+            char_info = self.character_manager.get_character(char_key)
+            if char_info:
+                await self.send_character_image(interaction, char_info)
+            else:
+                await interaction.response.send_message(
+                    f"Error retrieving character information.",
+                    ephemeral=True
+                )
+
+        @self.character_group.command(name="list")
+        @app_commands.describe(series="Choose a series to list characters from")
+        @app_commands.choices(series=series_choices)
+        async def list_command(
+                interaction: discord.Interaction,
+                series: str
+        ):
+            """List all available characters in a series"""
+            embed = discord.Embed(
+                title=f"Characters from {get_series_display_name(series)}",
+                description=self.get_character_list(series),
+                color=discord.Color.blue()
+            )
+            await interaction.response.send_message(embed=embed)
+
 
 async def setup(bot: commands.Bot) -> None:
     """Setup function to add cog to bot"""

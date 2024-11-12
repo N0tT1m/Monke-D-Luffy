@@ -1,22 +1,12 @@
-# Create this file as bot/cogs/utils/base_cog.py
+# bot/cogs/base_cog.py
 
 import discord
 from discord.ext import commands
 import logging
 from typing import Dict
 
-from .handlers import CharacterInfo, ImageHandler
-
-logger = logging.getLogger('AnimeBaseCog')
-
-# Create this file as bot/cogs/utils/base_cog.py
-
-import discord
-from discord.ext import commands
-import logging
-from typing import Dict
-
-from .handlers import CharacterInfo, ImageHandler
+from .utils.handlers import CharacterInfo, ImageHandler, CharacterManager
+from .utils.constants import CHARACTER_MAPPINGS, CHARACTER_DESCRIPTIONS
 
 logger = logging.getLogger('AnimeBaseCog')
 
@@ -26,7 +16,7 @@ class BaseAnimeCog(commands.Cog):
     def __init__(self, bot: commands.Bot, root_dir: str):
         self.bot = bot
         self.image_handler = ImageHandler(root_dir)
-        self.characters: Dict[str, CharacterInfo] = {}
+        self.character_manager = CharacterManager(CHARACTER_MAPPINGS, CHARACTER_DESCRIPTIONS)
 
     async def send_character_image(self, interaction: discord.Interaction, character: CharacterInfo):
         """Send an embed with random character image"""
@@ -35,7 +25,8 @@ class BaseAnimeCog(commands.Cog):
 
             embed = discord.Embed(
                 title=f"{character.title} ({character.source})",
-                description=character.description
+                description=character.description,
+                color=discord.Color.random()
             )
 
             file = discord.File(
@@ -46,25 +37,25 @@ class BaseAnimeCog(commands.Cog):
             embed.set_image(url=f"attachment://{filename}")
             await interaction.response.send_message(file=file, embed=embed)
 
+        except FileNotFoundError:
+            await interaction.response.send_message(
+                f"No images found for {character.title}",
+                ephemeral=True
+            )
         except Exception as e:
             logger.error(f"Error sending image for {character.name}: {e}")
             await interaction.response.send_message(
-                f"Error retrieving image for {character.name}",
+                f"Error retrieving image for {character.title}",
                 ephemeral=True
             )
 
-    def register_character_commands(self):
-        """Register commands for all characters"""
-        for char_info in self.characters.values():
-            @commands.command(
-                name=char_info.name.lower(),
-                aliases=char_info.aliases
-            )
-            async def character_command(
-                    self,
-                    ctx: commands.Context,
-                    char_info=char_info
-            ):
-                await self.send_character_image(ctx, char_info)
+    def get_character_list(self, series: str) -> str:
+        """Get formatted list of available characters for a series"""
+        characters = self.character_manager.get_characters_by_series(series)
+        if not characters:
+            return "No characters found for this series."
 
-            self.__cog_commands__ = self.__cog_commands__ + (character_command,)
+        return "\n".join(
+            f"• {char.title} - {char.description.split('.')[0]}"
+            for char in sorted(characters, key=lambda x: x.title)
+        )

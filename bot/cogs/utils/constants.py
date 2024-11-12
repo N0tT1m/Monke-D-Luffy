@@ -934,3 +934,13 @@ CHARACTER_DESCRIPTIONS = {
         "yukari": ("Yuzuki Yukari", "The Purple-Haired Voiceroid and Vocaloid")
     },
 }
+
+VALID_SERIES = set(CHARACTER_MAPPINGS.keys())
+
+def get_series_display_name(series_key: str) -> str:
+    """Convert series key to display name"""
+    return series_key.replace('_', ' ').title()
+
+def get_character_display_name(char_key: str) -> str:
+    """Convert character key to display name"""
+    return char_key.replace('_', ' ').title()
