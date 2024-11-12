@@ -598,6 +598,29 @@ CHARACTER_DESCRIPTIONS = {
         "yamato": ("Yamato", "Kaido's offspring who chose to ally with the Straw Hats and carries Oden's will"),
     },
 
+    "dota2": {
+        "lina": ("Lina", "The Slayer, a fierce intelligence hero who controls fire with devastating spells and a fiery temper to match"),
+        "crystal_maiden": ("Crystal Maiden", "Rylai the Crystal Maiden, master of ice magic who supports her allies with frost-based abilities and mana regeneration"),
+        "invoker": ("Invoker", "Kael the Invoker, a supremely talented mage who wields an arsenal of spells through his mastery of the elements"),
+        "windrunner": ("Windrunner", "Lyralei the Windranger, an agile archer who harnesses the power of the wind to unleash precise attacks"),
+        "marci": ("Marci", "A loyal companion turned hero, Marci fights with incredible martial arts skills and superhuman strength"),
+        "dark_willow": ("Dark Willow", "Mireska Sunbreeze, a mischievous fae who uses her magical abilities to terrorize and control the battlefield"),
+        "mirana": ("Mirana", "Princess of the Moon, riding her sacred mount Sagan while unleashing sacred arrows and starfall magic"),
+        "broodmother": ("Broodmother", "The Black Arachnia, a terrifying spider queen who weaves webs and commands armies of spiderlings"),
+        "dawnbreaker": ("Dawnbreaker", "Valora, a celestial warrior who wields a massive hammer and brings the light of the dawn to battle"),
+        "death_prophet": ("Death Prophet", "Krobelus, a ghostly prophet who summons spirits to drain the life from her enemies"),
+        "enchantress": ("Enchantress", "Aiushtha, a nature's enchantress who charms creatures and impales enemies with untouchable grace"),
+        "legion_commander": ("Legion Commander", "Tresdin, a fearless commander who challenges enemies to honorable duels to the death"),
+        "luna": ("Luna", "The Moon Rider, a fierce warrior of the Dark Moon order who fights alongside her feline mount Nova"),
+        "naga_siren": ("Naga Siren", "Slithice, a powerful siren who uses illusions and her enchanting song to confound enemies"),
+        "phantom_assassin": ("Phantom Assassin", "Mortred, a lethal assassin who strikes with critical precision and blurs between shadows"),
+        "queen_of_pain": ("Queen of Pain", "Akasha, a sadistic demon queen who brings pain and torment with her sonic attacks"),
+        "snapfire": ("Snapfire", "Beatrix Snapfire, a cookie-baking grandmother who rides her dragon toad while firing devastating shots"),
+        "spectre": ("Spectre", "Mercurial, a spectral being who haunts her enemies and can traverse dimensions to strike"),
+        "templar_assassin": ("Templar Assassin", "Lanaya, a master of psionic traps and stealth who guards the secrets of the Hidden Temple"),
+        "vengeful_spirit": ("Vengeful Spirit", "A fallen princess of the Nest of Thorns, seeking vengeance with her arsenal of spirit-based abilities"),
+    },
+
     "naruto": {
         "tsunade": ("Tsunade Senju", "The Fifth Hokage and Legendary Sannin"),
         "sakura": ("Sakura Haruno", "The Strongest Medical Ninja and Student of Tsunade"),
@@ -936,7 +959,7 @@ CHARACTER_DESCRIPTIONS = {
         "toga": ("Himiko Toga", "League of Villains' Transform Expert")
     },
 
-"jojos_bizarre_adventure": {
+    "jojos_bizarre_adventure": {
         "jolyne": ("Jolyne Cujoh", "Stone Free Stand User and Jotaro's Daughter"),
         "lisa_lisa": ("Lisa Lisa", "Hamon Master and Joseph's Mother"),
         "erina": ("Erina Pendleton", "Jonathan's Wife and Hamon Healer"),

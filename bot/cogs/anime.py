@@ -1,3 +1,6 @@
+import random
+
+import discord
 from discord import app_commands, Interaction
 from discord.ext import commands
 import logging
@@ -24,6 +27,7 @@ class AnimeCog(BaseAnimeCog):
             description="Get character images"
         )
         self.register_slash_commands()
+        self.setup_random_command()  # Add this line
         logger.info("AnimeCog initialization complete")
 
     def load_all_characters(self):
@@ -109,6 +113,84 @@ class AnimeCog(BaseAnimeCog):
                 return char
 
         return None
+
+    def setup_random_command(self):
+        """Setup command for random character images"""
+
+        @self.bot.tree.command(
+            name="random",
+            description="Get a random character image from any series"
+        )
+        @app_commands.describe(
+            series_name="Optional: Specify a series to get random character from (leave empty for any series)"
+        )
+        @app_commands.choices(series_name=[
+            app_commands.Choice(name="One Piece", value="one_piece"),
+            app_commands.Choice(name="Naruto", value="naruto"),
+            app_commands.Choice(name="Fairy Tail", value="fairy_tail"),
+            app_commands.Choice(name="Dragon Ball", value="dragon_ball"),
+            app_commands.Choice(name="Attack on Titan", value="attack_on_titan"),
+            app_commands.Choice(name="Demon Slayer", value="demon_slayer"),
+            app_commands.Choice(name="Jujutsu Kaisen", value="jujutsu_kaisen"),
+            app_commands.Choice(name="Cowboy Bebop", value="cowboy_bebop"),
+            app_commands.Choice(name="Spy x Family", value="spy_x_family"),
+            app_commands.Choice(name="One Punch Man", value="one_punch_man"),
+            app_commands.Choice(name="Hunter x Hunter", value="hunter_x_hunter"),
+            app_commands.Choice(name="Fullmetal Alchemist", value="fullmetal_alchemist"),
+            app_commands.Choice(name="My Hero Academia", value="my_hero_academia"),
+            app_commands.Choice(name="JoJo's Bizarre Adventure", value="jojos_bizarre_adventure"),
+            app_commands.Choice(name="Pokemon", value="pokemon"),
+            app_commands.Choice(name="Hatsune Miku", value="hatsune_miku"),
+            app_commands.Choice(name="League of Legends", value="league_of_legends"),
+            app_commands.Choice(name="Dota 2", value="dota2")
+        ])
+        async def random_character(interaction: discord.Interaction, series_name: str = None):
+            """Get a random character image"""
+            try:
+                await interaction.response.defer()
+
+                if series_name:
+                    # Get random character from specific series
+                    chars = CHARACTER_MAPPINGS.get(series_name, {})
+                    if not chars:
+                        await interaction.followup.send(f"No characters found for {series_name}")
+                        return
+
+                    char_id = random.choice(list(chars.keys()))
+                    name, description = CHARACTER_DESCRIPTIONS[series_name][char_id]
+                    series_display_name = series_name.replace('_', ' ').title()
+
+                else:
+                    # Get random character from any series
+                    all_series = list(CHARACTER_MAPPINGS.keys())
+                    random_series = random.choice(all_series)
+                    chars = CHARACTER_MAPPINGS[random_series]
+                    char_id = random.choice(list(chars.keys()))
+                    name, description = CHARACTER_DESCRIPTIONS[random_series][char_id]
+                    series_display_name = random_series.replace('_', ' ').title()
+
+                # Create character info for image handling
+                char_info = CharacterInfo(
+                    name=char_id,
+                    title=name,
+                    description=description,
+                    folder=f"{random_series}/{char_id}",
+                    source=series_display_name,
+                    aliases=chars[char_id]
+                )
+
+                # Reuse existing image sending logic
+                await self.send_character_image(interaction, char_info, already_deferred=True)
+
+            except Exception as e:
+                logger.error(f"Error in random character command: {e}", exc_info=True)
+                try:
+                    await interaction.followup.send(
+                        "Error getting random character image",
+                        ephemeral=True
+                    )
+                except discord.NotFound:
+                    pass
 
     def register_slash_commands(self):
         """Register slash commands for all characters"""

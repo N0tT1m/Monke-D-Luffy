@@ -1,9 +1,11 @@
-import discord
-from discord import app_commands
 from discord.ext import commands
-from typing import Dict, List, Tuple
+from discord import app_commands
+import discord
 import logging
+import random
+from typing import Dict, List, Tuple, Optional, Literal
 from .utils.constants import CHARACTER_DESCRIPTIONS, CHARACTER_MAPPINGS
+from .utils.handlers import CharacterInfo, ImageHandler  # Add this import
 
 logger = logging.getLogger('HelpCog')
 
@@ -15,11 +17,13 @@ class CharacterHelpCog(commands.Cog, name="Help Commands"):
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
+        # self.image_handler = ImageHandler("./hentai")  # Add this
         self.series_group = app_commands.Group(
             name="series",
             description="Show available series and characters"
         )
         self.setup_series_commands()
+        # self.setup_random_command()  # Add this line
 
     def setup_series_commands(self):
         """Setup all series-related commands"""
@@ -175,6 +179,11 @@ async def setup(bot: commands.Bot) -> None:
         cog = CharacterHelpCog(bot)
         await bot.add_cog(cog)
         bot.tree.add_command(cog.series_group)
+
+        # This line ensures commands are synced on cog load
+        # Comment it out if you want to manually sync with the sync command
+        # await bot.tree.sync()
+
         logger.info("Successfully loaded help cog")
     except Exception as e:
         logger.error(f"Error loading help cog: {e}")
