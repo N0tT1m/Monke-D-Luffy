@@ -941,3 +941,22 @@ task: <Task pending name='Task-2' coro=<shutdown_handler() running at /home/timm
 2024-11-12 07:10:23,864 - HentaiBot - INFO - Shutting down bot...
 2024-11-12 07:10:23,865 - HentaiBot - INFO - Shutdown complete
 2024-11-12 07:10:23,865 - BotLauncher - INFO - Bot shutdown complete
+2024-11-12 08:20:03,716 - HentaiBot - INFO - Starting bot...
+2024-11-12 08:20:03,716 - discord.client - INFO - logging in using static token
+2024-11-12 08:20:04,293 - HentaiBot - INFO - Starting bot setup...
+2024-11-12 08:20:04,296 - HelpCog - INFO - Successfully loaded help cog
+2024-11-12 08:20:04,296 - HentaiBot - INFO - Loaded cog: help
+2024-11-12 08:20:04,299 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-12 08:20:04,299 - HentaiBot - INFO - Loaded cog: gif
+2024-11-12 08:20:04,301 - AnimeCogs - INFO - Successfully loaded anime cog
+2024-11-12 08:20:04,301 - HentaiBot - INFO - Loaded cog: anime
+2024-11-12 08:20:04,301 - HentaiBot - INFO - Cogs loaded successfully!
+2024-11-12 08:20:05,302 - HentaiBot - INFO - Syncing commands...
+2024-11-12 08:20:05,677 - HentaiBot - INFO - Commands synced successfully!
+2024-11-12 08:20:05,939 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 961c0193574ada27e22f4a4f31701f32).
+2024-11-12 08:20:05,939 - HentaiBot - INFO - Connected to Discord (latency: 39ms)
+2024-11-12 08:20:08,184 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-12 08:20:08,184 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-12 08:21:05,100 - HentaiBot - INFO - Shutting down bot...
+2024-11-12 08:21:05,101 - HentaiBot - INFO - Shutdown complete
+2024-11-12 08:21:05,101 - BotLauncher - INFO - Bot shutdown complete
