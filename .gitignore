@@ -5,3 +5,6 @@ lib/
 hentai.zip
 .env
 .DS_Store
+Scripts/
+Include/
+Lib/

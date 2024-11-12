@@ -1,0 +1,772 @@
+2024-11-11 19:20:02,461 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2024-11-11 19:24:55,354 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:24:55,354 - discord.client - INFO - logging in using static token
+2024-11-11 19:24:55,670 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:24:55,677 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: NameError: name 'field' is not defined
+2024-11-11 19:24:55,679 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' has no 'setup' function.
+2024-11-11 19:24:55,680 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:24:55,681 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:24:56,469 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 2a8ad8354551c7a5caa09a6e6f5e70bd).
+2024-11-11 19:24:56,470 - HentaiBot - INFO - Connected to Discord (latency: 36ms)
+2024-11-11 19:24:58,662 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:30:22,304 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:30:23,422 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:30:23,423 - discord.client - INFO - logging in using static token
+2024-11-11 19:30:23,849 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:30:23,867 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:30:23,868 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:30:23,878 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:30:23,878 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:30:23,879 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:30:23,879 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:30:23,880 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:30:24,149 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b301c7e145507c30ac5b1a38a70514e7).
+2024-11-11 19:30:24,151 - HentaiBot - INFO - Connected to Discord (latency: 40ms)
+2024-11-11 19:30:26,329 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:33:17,275 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:33:18,321 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:33:18,321 - discord.client - INFO - logging in using static token
+2024-11-11 19:33:18,652 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:33:18,665 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:33:18,666 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:33:18,676 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:33:18,676 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:33:18,679 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 19:33:18,680 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 19:33:18,680 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:33:18,681 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:33:18,681 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:33:18,911 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 92a136a9bcd741b3f0446ca96ad28e3d).
+2024-11-11 19:33:18,912 - HentaiBot - INFO - Connected to Discord (latency: 38ms)
+2024-11-11 19:33:21,125 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:36:23,260 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:36:24,374 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:36:24,374 - discord.client - INFO - logging in using static token
+2024-11-11 19:36:24,770 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:36:24,783 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:36:24,783 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:36:24,793 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:36:24,793 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:36:24,796 - HelpCog - ERROR - Error loading help cog: 'NoneType' object has no attribute 'change_presence'
+2024-11-11 19:36:24,797 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: AttributeError: 'NoneType' object has no attribute 'change_presence'
+2024-11-11 19:36:24,797 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:36:24,798 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:36:24,798 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:36:25,012 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 1561fd26a669de21c99bdc28fca92a64).
+2024-11-11 19:36:25,014 - HentaiBot - INFO - Connected to Discord (latency: 48ms)
+2024-11-11 19:36:27,211 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:37:12,108 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:37:13,145 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:37:13,146 - discord.client - INFO - logging in using static token
+2024-11-11 19:37:13,464 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:37:13,477 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:37:13,477 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:37:13,487 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:37:13,487 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:37:13,489 - HelpCog - ERROR - Error loading help cog: 'NoneType' object has no attribute 'change_presence'
+2024-11-11 19:37:13,489 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: AttributeError: 'NoneType' object has no attribute 'change_presence'
+2024-11-11 19:37:13,489 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:37:13,490 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:37:13,490 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:37:13,868 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 5f94582cbfb0d19cc3e996f87d90cb56).
+2024-11-11 19:37:13,869 - HentaiBot - INFO - Connected to Discord (latency: 34ms)
+2024-11-11 19:37:16,134 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:38:22,469 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:38:23,421 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:38:23,421 - discord.client - INFO - logging in using static token
+2024-11-11 19:38:23,749 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:38:23,762 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:38:23,762 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:38:23,771 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:38:23,771 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:38:23,772 - HelpCog - ERROR - Error loading help cog: 'NoneType' object has no attribute 'change_presence'
+2024-11-11 19:38:23,773 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: AttributeError: 'NoneType' object has no attribute 'change_presence'
+2024-11-11 19:38:23,774 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:38:23,774 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:38:23,775 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:38:24,016 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 3f058428d31057d7b64f442be3bfcd38).
+2024-11-11 19:38:24,017 - HentaiBot - INFO - Connected to Discord (latency: 35ms)
+2024-11-11 19:38:26,218 - HentaiBot - ERROR - Error in on_ready
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py", line 449, in _run_event
+    await coro(*args, **kwargs)
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 123, in on_ready
+    await self.bot.change_presence(
+          ^^^^^^^^
+AttributeError: 'HentaiBot' object has no attribute 'bot'
+2024-11-11 19:39:22,111 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:39:23,208 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:39:23,208 - discord.client - INFO - logging in using static token
+2024-11-11 19:39:23,556 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:39:23,567 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:39:23,568 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:39:23,577 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:39:23,578 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:39:23,580 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 19:39:23,580 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 19:39:23,581 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:39:23,581 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:39:23,582 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:39:23,808 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 421e2dea6292d17c61ecb6d99c084ae0).
+2024-11-11 19:39:23,810 - HentaiBot - INFO - Connected to Discord (latency: 48ms)
+2024-11-11 19:39:25,849 - HelpCog - INFO - Help cog status set
+2024-11-11 19:39:26,003 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:39:50,973 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:39:51,876 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:39:51,876 - discord.client - INFO - logging in using static token
+2024-11-11 19:39:52,253 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:39:52,266 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:39:52,267 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:39:52,276 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:39:52,276 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:39:52,278 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 19:39:52,278 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 19:39:52,278 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:39:52,279 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:39:52,279 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:39:52,496 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: fab07e0c25b179aabe4be36c0d1edcc4).
+2024-11-11 19:39:52,496 - HentaiBot - INFO - Connected to Discord (latency: 40ms)
+2024-11-11 19:39:54,560 - HelpCog - INFO - Help cog status set
+2024-11-11 19:39:54,761 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:40:12,450 - HentaiBot - ERROR - Command error: Command raised an exception: NameError: name 'other' is not defined
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\cogs\help.py", line 87, in series
+    for name in other),
+                ^^^^^
+NameError: name 'other' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1655, in invoke
+    await super().invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'other' is not defined
+2024-11-11 19:40:25,137 - HentaiBot - ERROR - Command error: Command raised an exception: NameError: name 'other' is not defined
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\cogs\help.py", line 87, in series
+    for name in other),
+                ^^^^^
+NameError: name 'other' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1655, in invoke
+    await super().invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'other' is not defined
+2024-11-11 19:42:09,679 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:42:10,722 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:42:10,722 - discord.client - INFO - logging in using static token
+2024-11-11 19:42:11,047 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:42:11,058 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:42:11,059 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:42:11,069 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:42:11,069 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:42:11,072 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 19:42:11,073 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 19:42:11,073 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:42:11,074 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:42:11,074 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:42:11,288 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 7069cdf359258118f58e9f79f5e0299f).
+2024-11-11 19:42:11,290 - HentaiBot - INFO - Connected to Discord (latency: 47ms)
+2024-11-11 19:42:13,321 - HelpCog - INFO - Help cog status set
+2024-11-11 19:42:13,512 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:42:26,510 - HentaiBot - ERROR - Command error: Command raised an exception: NameError: name 'vocaloid' is not defined
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\cogs\help.py", line 86, in series
+    for name in vocaloid),
+                ^^^^^^^^
+NameError: name 'vocaloid' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1655, in invoke
+    await super().invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: NameError: name 'vocaloid' is not defined
+2024-11-11 19:42:37,913 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:42:38,939 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:42:38,939 - discord.client - INFO - logging in using static token
+2024-11-11 19:42:39,282 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:42:39,293 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:42:39,294 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:42:39,304 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:42:39,304 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:42:39,308 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 19:42:39,308 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 19:42:39,309 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:42:39,310 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:42:39,310 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:42:39,601 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 0ac8994921cecd311a6f740412723256).
+2024-11-11 19:42:39,603 - HentaiBot - INFO - Connected to Discord (latency: 38ms)
+2024-11-11 19:42:41,634 - HelpCog - INFO - Help cog status set
+2024-11-11 19:42:41,861 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:43:21,611 - HentaiBot - ERROR - Command error: Command raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.0.value: Must be 1024 or fewer in length.
+In embeds.0.fields.1.value: Must be 1024 or fewer in length.
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\cogs\help.py", line 104, in one_piece
+    await self._send_series_help(ctx, "one_piece", "One Piece")
+  File "E:\workspace\bots\Monke-d-luffy\bot\cogs\help.py", line 239, in _send_series_help
+    await ctx.send(embed=embed)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\context.py", line 1039, in send
+    return await super().send(
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\abc.py", line 1618, in send
+    data = await state.http.send_message(channel.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\http.py", line 758, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.0.value: Must be 1024 or fewer in length.
+In embeds.0.fields.1.value: Must be 1024 or fewer in length.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1650, in invoke
+    await ctx.invoked_subcommand.invoke(ctx)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In embeds.0.fields.0.value: Must be 1024 or fewer in length.
+In embeds.0.fields.1.value: Must be 1024 or fewer in length.
+2024-11-11 19:44:29,656 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:44:30,439 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:44:30,439 - discord.client - INFO - logging in using static token
+2024-11-11 19:44:30,793 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:44:30,804 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:44:30,804 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:44:30,814 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:44:30,814 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:44:30,818 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 19:44:30,818 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 19:44:30,819 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:44:30,819 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:44:30,820 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:44:31,142 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 0e9d6891b818c3ec0b95fb3345f49d79).
+2024-11-11 19:44:31,143 - HentaiBot - INFO - Connected to Discord (latency: 39ms)
+2024-11-11 19:44:33,162 - HelpCog - INFO - Help cog status set
+2024-11-11 19:44:33,356 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:45:45,759 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-11 19:45:45,919 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 0e9d6891b818c3ec0b95fb3345f49d79.
+2024-11-11 19:45:45,919 - HentaiBot - INFO - Resumed Discord connection
+2024-11-11 19:47:56,247 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:47:57,301 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:47:57,301 - discord.client - INFO - logging in using static token
+2024-11-11 19:47:57,779 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:47:57,790 - AnimeCogs - ERROR - Error loading anime cog: The alias nami is already an existing command or alias.
+2024-11-11 19:47:57,792 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: CommandRegistrationError: The alias nami is already an existing command or alias.
+2024-11-11 19:47:57,805 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 19:47:57,805 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 19:47:57,809 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: NameError: name 'app_commands' is not defined
+2024-11-11 19:47:57,810 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:47:57,811 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:47:57,812 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:47:58,097 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 561493fd4161da1680fa79b848493875).
+2024-11-11 19:47:58,097 - HentaiBot - INFO - Connected to Discord (latency: 41ms)
+2024-11-11 19:48:00,294 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:49:34,880 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:49:35,835 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:49:35,836 - discord.client - INFO - logging in using static token
+2024-11-11 19:49:36,150 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:49:36,157 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:49:36,158 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:49:36,160 - GifCogs - ERROR - Error loading gif cog: name 'discord' is not defined
+2024-11-11 19:49:36,160 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: NameError: name 'discord' is not defined
+2024-11-11 19:49:36,161 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: NameError: name 'app_commands' is not defined
+2024-11-11 19:49:36,161 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:49:36,162 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:49:36,162 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:49:38,361 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: da2d9cde70e8a5853d440e4fdcedb610).
+2024-11-11 19:49:38,361 - HentaiBot - INFO - Connected to Discord (latency: 49ms)
+2024-11-11 19:49:40,625 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:51:23,502 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:51:24,496 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:51:24,496 - discord.client - INFO - logging in using static token
+2024-11-11 19:51:24,993 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:51:24,998 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:51:24,999 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:51:25,000 - GifCogs - ERROR - Error loading gif cog: name 'discord' is not defined
+2024-11-11 19:51:25,000 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: NameError: name 'discord' is not defined
+2024-11-11 19:51:25,001 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: NameError: name 'app_commands' is not defined
+2024-11-11 19:51:25,002 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:51:25,002 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:51:25,004 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:51:25,226 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 7d76e73444fdb5b69cd0c25736aab3b8).
+2024-11-11 19:51:25,227 - HentaiBot - INFO - Connected to Discord (latency: 40ms)
+2024-11-11 19:51:27,499 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:53:06,597 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:53:58,221 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:53:58,221 - discord.client - INFO - logging in using static token
+2024-11-11 19:53:58,528 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:53:58,532 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:53:58,532 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:53:58,534 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:53:58,534 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:53:58,537 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: NameError: name 'series_group_group' is not defined
+2024-11-11 19:53:58,537 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:53:58,538 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:53:58,538 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:53:58,917 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 7308cb1efb95bbd13a3476d469358bc3).
+2024-11-11 19:53:58,917 - HentaiBot - INFO - Connected to Discord (latency: 49ms)
+2024-11-11 19:54:01,137 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:55:16,415 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:55:17,217 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:55:17,217 - discord.client - INFO - logging in using static token
+2024-11-11 19:55:17,568 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:55:17,573 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:55:17,573 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:55:17,574 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:55:17,574 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:55:17,578 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: NameError: name 'series_group_group' is not defined
+2024-11-11 19:55:17,578 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:55:17,578 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:55:17,579 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:55:17,881 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 70643e2b291e6614f293866d40e2cab6).
+2024-11-11 19:55:17,882 - HentaiBot - INFO - Connected to Discord (latency: 36ms)
+2024-11-11 19:55:20,163 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:55:36,060 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:55:36,961 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:55:36,961 - discord.client - INFO - logging in using static token
+2024-11-11 19:55:37,394 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:55:37,398 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:55:37,398 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:55:37,399 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:55:37,399 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:55:37,403 - HelpCog - ERROR - Error loading help cog: Command 'series' already registered.
+2024-11-11 19:55:37,403 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: CommandAlreadyRegistered: Command 'series' already registered.
+2024-11-11 19:55:37,404 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:55:37,404 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:55:37,404 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:55:37,680 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 62e669f4a3d86a8846263e5791cd967f).
+2024-11-11 19:55:37,682 - HentaiBot - INFO - Connected to Discord (latency: 42ms)
+2024-11-11 19:55:39,930 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 19:56:54,388 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 19:56:55,377 - HentaiBot - INFO - Starting bot...
+2024-11-11 19:56:55,377 - discord.client - INFO - logging in using static token
+2024-11-11 19:56:55,775 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 19:56:55,780 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:56:55,780 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 19:56:55,782 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:56:55,782 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 19:56:55,783 - HelpCog - ERROR - Error loading help cog: Command 'series' already registered.
+2024-11-11 19:56:55,783 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: CommandAlreadyRegistered: Command 'series' already registered.
+2024-11-11 19:56:55,784 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 19:56:55,784 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 19:56:55,785 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 19:56:55,990 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 2aa87aec334956e86afc4dc3a071107d).
+2024-11-11 19:56:55,991 - HentaiBot - INFO - Connected to Discord (latency: 34ms)
+2024-11-11 19:56:58,156 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:01:21,175 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:01:22,358 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:01:22,359 - discord.client - INFO - logging in using static token
+2024-11-11 20:01:22,672 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:01:22,677 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 20:01:22,677 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 20:01:22,678 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 20:01:22,678 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 20:01:22,680 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: NameError: name 'series_group' is not defined
+2024-11-11 20:01:22,681 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 20:01:22,681 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 20:01:22,682 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 20:01:22,898 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 0805e987afef60f57c5946241ebcc968).
+2024-11-11 20:01:22,898 - HentaiBot - INFO - Connected to Discord (latency: 34ms)
+2024-11-11 20:01:25,266 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:01:49,634 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:01:50,428 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:01:50,428 - discord.client - INFO - logging in using static token
+2024-11-11 20:01:50,825 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:01:50,829 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 20:01:50,830 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command'
+2024-11-11 20:01:50,831 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 20:01:50,831 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command'
+2024-11-11 20:01:50,834 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: NameError: name 'series_group' is not defined
+2024-11-11 20:01:50,834 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 20:01:50,835 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 20:01:50,835 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 20:01:51,066 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 87562761c5ca291a3acb0e198ea51184).
+2024-11-11 20:01:51,067 - HentaiBot - INFO - Connected to Discord (latency: 43ms)
+2024-11-11 20:01:53,276 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:03:52,037 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:03:52,037 - discord.client - INFO - logging in using static token
+2024-11-11 20:03:52,458 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:03:52,464 - AnimeCogs - ERROR - Error loading anime cog: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:03:52,464 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:03:52,465 - GifCogs - ERROR - Error loading gif cog: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:03:52,466 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:03:52,468 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:03:52,468 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:03:52,469 - HentaiBot - ERROR - Failed to load cog naruto: Extension 'bot.cogs.naruto' has no 'setup' function.
+2024-11-11 20:03:52,469 - HentaiBot - ERROR - Failed to load cog one_piece: Extension 'bot.cogs.one_piece' has no 'setup' function.
+2024-11-11 20:03:52,469 - HentaiBot - ERROR - Failed to load cog __init__: Extension 'bot.cogs.__init__' has no 'setup' function.
+2024-11-11 20:03:52,680 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: cc47a9f8e282e4ceff9c19ddb12882ea).
+2024-11-11 20:03:52,680 - HentaiBot - INFO - Connected to Discord (latency: 38ms)
+2024-11-11 20:03:54,687 - HelpCog - INFO - Help cog status set
+2024-11-11 20:03:54,861 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:04:25,409 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:04:26,356 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:04:26,357 - discord.client - INFO - logging in using static token
+2024-11-11 20:04:26,749 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:04:26,753 - AnimeCogs - ERROR - Error loading anime cog: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:04:26,753 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:04:26,754 - GifCogs - ERROR - Error loading gif cog: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:04:26,754 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:04:26,755 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:04:26,755 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:04:26,951 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: a7e528d210f04dcad24d5d9057809b64).
+2024-11-11 20:04:26,952 - HentaiBot - INFO - Connected to Discord (latency: 41ms)
+2024-11-11 20:04:28,972 - HelpCog - INFO - Help cog status set
+2024-11-11 20:04:29,115 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:11:52,996 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:11:53,940 - BotLauncher - ERROR - Fatal error occurred: Required environment variable APPLICATION_ID is not set
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\launcher.py", line 26, in main
+    bot = HentaiBot()
+          ^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 52, in __init__
+    self.config = BotConfig()
+                  ^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 34, in __init__
+    self.application_id: int = int(self._get_required_env("APPLICATION_ID"))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 40, in _get_required_env
+    raise ValueError(f"Required environment variable {key} is not set")
+ValueError: Required environment variable APPLICATION_ID is not set
+2024-11-11 20:11:53,941 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:11:53,941 - BotLauncher - CRITICAL - Failed to start bot: cannot access local variable 'bot' where it is not associated with a value
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\launcher.py", line 26, in main
+    bot = HentaiBot()
+          ^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 52, in __init__
+    self.config = BotConfig()
+                  ^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 34, in __init__
+    self.application_id: int = int(self._get_required_env("APPLICATION_ID"))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 40, in _get_required_env
+    raise ValueError(f"Required environment variable {key} is not set")
+ValueError: Required environment variable APPLICATION_ID is not set
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\launcher.py", line 40, in <module>
+    asyncio.run(main())
+  File "C:\Users\Nathan\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Nathan\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nathan\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\launcher.py", line 33, in main
+    await bot.close()
+          ^^^
+UnboundLocalError: cannot access local variable 'bot' where it is not associated with a value
+2024-11-11 20:12:44,497 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:12:44,497 - discord.client - INFO - logging in using static token
+2024-11-11 20:12:44,834 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:12:44,838 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: NameError: name 'discord' is not defined
+2024-11-11 20:12:44,840 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: NameError: name 'discord' is not defined
+2024-11-11 20:12:44,844 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: TypeError: object NoneType can't be used in 'await' expression
+2024-11-11 20:12:44,844 - HentaiBot - INFO - Syncing commands with Discord...
+2024-11-11 20:12:44,956 - HentaiBot - INFO - Command sync complete!
+2024-11-11 20:12:45,233 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 114f96dbd93dd823373e2dc8a13ead6d).
+2024-11-11 20:12:45,233 - HentaiBot - INFO - Connected to Discord (latency: 36ms)
+2024-11-11 20:12:47,438 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:12:47,438 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-11 20:16:48,225 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:16:49,433 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:16:49,434 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:16:49,434 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:16:49,434 - discord.client - INFO - logging in using static token
+2024-11-11 20:16:49,861 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:16:49,865 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: NameError: name 'discord' is not defined
+2024-11-11 20:16:49,866 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: NameError: name 'discord' is not defined
+2024-11-11 20:16:49,867 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: TypeError: object NoneType can't be used in 'await' expression
+2024-11-11 20:16:49,867 - HentaiBot - INFO - Syncing commands with Discord...
+2024-11-11 20:16:49,972 - HentaiBot - INFO - Command sync complete!
+2024-11-11 20:16:50,204 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 03ff26d78e3122de8e8467f8634f3f44).
+2024-11-11 20:16:50,206 - HentaiBot - INFO - Connected to Discord (latency: 39ms)
+2024-11-11 20:16:52,375 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:16:52,375 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-11 20:19:13,324 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:19:13,577 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:19:13,866 - BotLauncher - INFO - Starting graceful shutdown process...
+2024-11-11 20:19:13,866 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:19:13,866 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:19:13,867 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-11 20:19:13,867 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:19:13,876 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:19:13,876 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-20' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>
+2024-11-11 20:19:13,877 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at E:\workspace\bots\Monke-d-luffy\launcher.py:43> wait_for=<Task pending name='Task-20' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>>
+2024-11-11 20:19:13,877 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F4D10E4D90>
+2024-11-11 20:19:14,732 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:19:14,734 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:19:14,734 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:19:14,734 - discord.client - INFO - logging in using static token
+2024-11-11 20:19:15,087 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:19:15,092 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:19:15,094 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: unsupported type annotation <class 'bot.cogs.utils.handlers.CharacterInfo'>
+2024-11-11 20:19:15,096 - HentaiBot - ERROR - Failed to load cog help: Extension 'bot.cogs.help' raised an error: TypeError: object NoneType can't be used in 'await' expression
+2024-11-11 20:19:15,096 - HentaiBot - INFO - Syncing commands with Discord...
+2024-11-11 20:19:15,227 - HentaiBot - INFO - Command sync complete!
+2024-11-11 20:19:15,481 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 65d35948340537ad329fd1032327b85c).
+2024-11-11 20:19:15,481 - HentaiBot - INFO - Connected to Discord (latency: 39ms)
+2024-11-11 20:19:17,648 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:19:17,649 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-11 20:20:57,358 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:20:57,565 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:20:57,605 - BotLauncher - INFO - Starting graceful shutdown process...
+2024-11-11 20:20:57,605 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:20:57,605 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:20:57,606 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-11 20:20:57,606 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:20:57,614 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:20:57,615 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-20' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>
+2024-11-11 20:20:57,615 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at E:\workspace\bots\Monke-d-luffy\launcher.py:43> wait_for=<Task pending name='Task-20' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>>
+2024-11-11 20:20:57,615 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001CD9E1F4D50>
+2024-11-11 20:20:58,375 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:20:58,376 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:20:58,376 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:20:58,377 - discord.client - INFO - logging in using static token
+2024-11-11 20:20:58,716 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:20:59,023 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command_callback'
+2024-11-11 20:20:59,024 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command_callback'
+2024-11-11 20:20:59,025 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command_callback'
+2024-11-11 20:20:59,026 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command_callback'
+2024-11-11 20:20:59,028 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:20:59,028 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:20:59,028 - HentaiBot - INFO - Syncing commands with Discord...
+2024-11-11 20:20:59,326 - HentaiBot - INFO - Command sync complete!
+2024-11-11 20:20:59,530 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 127edf64d4889e8e484c940d5c42687b).
+2024-11-11 20:20:59,531 - HentaiBot - INFO - Connected to Discord (latency: 36ms)
+2024-11-11 20:21:01,777 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:21:01,777 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-11 20:21:17,922 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:21:18,131 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:21:18,610 - BotLauncher - INFO - Starting graceful shutdown process...
+2024-11-11 20:21:18,610 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:21:18,610 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:21:18,611 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-11 20:21:18,611 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:21:18,620 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:21:18,620 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-18' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>
+2024-11-11 20:21:18,620 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x0000014AE8FCB0E0>, 980232.5)]']
+connector: <aiohttp.connector.TCPConnector object at 0x0000014AE9054B50>
+2024-11-11 20:21:18,620 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at E:\workspace\bots\Monke-d-luffy\launcher.py:43> wait_for=<Task pending name='Task-18' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>>
+2024-11-11 20:21:34,085 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:21:34,086 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:21:34,086 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:21:34,086 - discord.client - INFO - logging in using static token
+2024-11-11 20:21:34,669 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:21:34,673 - AnimeCogs - ERROR - Error loading anime cog: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command_callback'
+2024-11-11 20:21:34,673 - HentaiBot - ERROR - Failed to load cog anime: Extension 'bot.cogs.anime' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'AnimeCog.register_slash_commands.<locals>.character_command_callback'
+2024-11-11 20:21:34,674 - GifCogs - ERROR - Error loading gif cog: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command_callback'
+2024-11-11 20:21:34,675 - HentaiBot - ERROR - Failed to load cog gif: Extension 'bot.cogs.gif' raised an error: TypeError: parameter 'char_info' is missing a type annotation in callback 'GifCog.register_slash_commands.<locals>.gif_command_callback'
+2024-11-11 20:21:34,676 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:21:34,676 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:21:34,676 - HentaiBot - INFO - Syncing commands with Discord...
+2024-11-11 20:21:34,890 - HentaiBot - INFO - Command sync complete!
+2024-11-11 20:21:35,114 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 63eb4cf646aa779e4234341ba8854ab6).
+2024-11-11 20:21:35,116 - HentaiBot - INFO - Connected to Discord (latency: 39ms)
+2024-11-11 20:21:37,317 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:21:37,317 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-11 20:22:40,488 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:22:40,639 - BotLauncher - INFO - Starting graceful shutdown process...
+2024-11-11 20:22:40,639 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:22:40,639 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:22:40,640 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-11 20:22:40,640 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:22:40,647 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:22:40,647 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-19' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>
+2024-11-11 20:22:40,648 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at E:\workspace\bots\Monke-d-luffy\launcher.py:43> wait_for=<Task pending name='Task-19' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>>
+2024-11-11 20:22:40,648 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002192C204FD0>
+2024-11-11 20:22:41,415 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:22:41,417 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:22:41,417 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:22:41,417 - discord.client - INFO - logging in using static token
+2024-11-11 20:22:41,771 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:22:41,776 - AnimeCogs - INFO - Successfully loaded anime cog
+2024-11-11 20:22:41,776 - HentaiBot - INFO - Loaded cog: anime
+2024-11-11 20:22:41,778 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 20:22:41,778 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 20:22:41,779 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:22:41,779 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:22:41,779 - HentaiBot - INFO - Syncing commands with Discord...
+2024-11-11 20:22:41,978 - HentaiBot - ERROR - Setup failed: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In group 'character' defined in module 'bot.cogs.anime'
+  In command 'character show' defined in function 'AnimeCog.register_slash_commands.<locals>.character_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+In group 'gif' defined in module 'bot.cogs.gif'
+  In command 'gif show' defined in function 'GifCog.register_slash_commands.<locals>.gif_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+2024-11-11 20:22:41,978 - HentaiBot - ERROR - Failed to start bot: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In group 'character' defined in module 'bot.cogs.anime'
+  In command 'character show' defined in function 'AnimeCog.register_slash_commands.<locals>.character_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+In group 'gif' defined in module 'bot.cogs.gif'
+  In command 'gif show' defined in function 'GifCog.register_slash_commands.<locals>.gif_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+2024-11-11 20:22:41,979 - BotLauncher - ERROR - Fatal error occurred: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In group 'character' defined in module 'bot.cogs.anime'
+  In command 'character show' defined in function 'AnimeCog.register_slash_commands.<locals>.character_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+In group 'gif' defined in module 'bot.cogs.gif'
+  In command 'gif show' defined in function 'GifCog.register_slash_commands.<locals>.gif_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\launcher.py", line 68, in main
+    await bot.start()
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 112, in start
+    await super().start(self.config.token, reconnect=True)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py", line 786, in start
+    await self.login(token)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py", line 629, in login
+    await self.setup_hook()
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 91, in setup_hook
+    await self.tree.sync()
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\app_commands\tree.py", line 1134, in sync
+    raise CommandSyncFailure(e, commands) from None
+discord.app_commands.errors.CommandSyncFailure: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In group 'character' defined in module 'bot.cogs.anime'
+  In command 'character show' defined in function 'AnimeCog.register_slash_commands.<locals>.character_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+In group 'gif' defined in module 'bot.cogs.gif'
+  In command 'gif show' defined in function 'GifCog.register_slash_commands.<locals>.gif_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+2024-11-11 20:22:41,981 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:22:41,981 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:22:41,981 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:22:41,981 - BotLauncher - CRITICAL - Fatal error in main loop: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In group 'character' defined in module 'bot.cogs.anime'
+  In command 'character show' defined in function 'AnimeCog.register_slash_commands.<locals>.character_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+In group 'gif' defined in module 'bot.cogs.gif'
+  In command 'gif show' defined in function 'GifCog.register_slash_commands.<locals>.gif_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+Traceback (most recent call last):
+  File "E:\workspace\bots\Monke-d-luffy\launcher.py", line 98, in run_bot
+    loop.run_until_complete(main())
+  File "C:\Users\Nathan\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\workspace\bots\Monke-d-luffy\launcher.py", line 68, in main
+    await bot.start()
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 112, in start
+    await super().start(self.config.token, reconnect=True)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py", line 786, in start
+    await self.login(token)
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py", line 629, in login
+    await self.setup_hook()
+  File "E:\workspace\bots\Monke-d-luffy\bot\bot.py", line 91, in setup_hook
+    await self.tree.sync()
+  File "E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\app_commands\tree.py", line 1134, in sync
+    raise CommandSyncFailure(e, commands) from None
+discord.app_commands.errors.CommandSyncFailure: Failed to upload commands to Discord (HTTP status 400, error code 50035)
+In group 'character' defined in module 'bot.cogs.anime'
+  In command 'character show' defined in function 'AnimeCog.register_slash_commands.<locals>.character_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+In group 'gif' defined in module 'bot.cogs.gif'
+  In command 'gif show' defined in function 'GifCog.register_slash_commands.<locals>.gif_command'
+    In parameter 'character'
+      choices: Must be 25 or fewer in length.
+2024-11-11 20:22:41,983 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:22:41,990 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at E:\workspace\bots\Monke-d-luffy\launcher.py:39> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-11 20:23:47,052 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:23:47,053 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:23:47,053 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:23:47,054 - discord.client - INFO - logging in using static token
+2024-11-11 20:23:47,396 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:23:47,401 - AnimeCogs - INFO - Successfully loaded anime cog
+2024-11-11 20:23:47,401 - HentaiBot - INFO - Loaded cog: anime
+2024-11-11 20:23:47,403 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 20:23:47,403 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 20:23:47,404 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:23:47,405 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:23:47,405 - HentaiBot - INFO - Syncing commands with Discord...
+2024-11-11 20:23:47,718 - HentaiBot - INFO - Command sync complete!
+2024-11-11 20:23:47,952 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 563151fe1dca342366a15adde297839c).
+2024-11-11 20:23:47,953 - HentaiBot - INFO - Connected to Discord (latency: 36ms)
+2024-11-11 20:23:50,236 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:23:50,236 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-11 20:30:23,005 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:30:23,246 - BotLauncher - INFO - Received signal 2. Starting graceful shutdown...
+2024-11-11 20:30:23,817 - BotLauncher - INFO - Starting graceful shutdown process...
+2024-11-11 20:30:23,817 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:30:23,818 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:30:23,818 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-11 20:30:23,818 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:30:23,829 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:30:23,829 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-33' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>
+2024-11-11 20:30:23,829 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at E:\workspace\bots\Monke-d-luffy\launcher.py:43> wait_for=<Task pending name='Task-33' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>>
+2024-11-11 20:30:23,830 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001A5EC224FD0>

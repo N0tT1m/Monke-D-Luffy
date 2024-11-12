@@ -1,290 +1,99 @@
-# from ast import alias
-# from email.mime import image
-# from genericpath import isfile
-# import pathlib
-# from discord.ext import commands
-# import discord
-# import typing as t
-# import random
-# import os
-#
-# ROOT_DIR = "./hentai/"
-#
-# class HentaiGif(commands.Cog):
-#     def __init__(self, bot, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         self.bot = bot
-#
-#     async def cog_check(self, ctx):
-#         if isinstance(ctx.channel, discord.DMChannel):
-#             await ctx.send("Hentai commands are not available in DMs.")
-#             return False
-#
-#         return True
-#
-#     @commands.command(name="namig", aliases=["ng", "gif nami"])
-#     async def nami_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_nami_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_nami_gif/" + random_file
-#
-#         embed = discord.Embed(title="Nami Gif", description="Nami The Cat Burgalar")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="hancockg", aliases=["hancock gif", "gif hancock"])
-#     async def hancock_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_hancock_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_hancock_gif/" + random_file
-#
-#         embed = discord.Embed(title="Hancock Gif", description="Hancock The Snake Princess")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     # @commands.command(name="namikalifag", aliases=["nkg", "gif nami & kalifa", "nami and kalifa gif", "gif nami and kalifa"])
-#     # async def nami_and_kalifa_gif(self, ctx):
-#     #     dir_path = pathlib.Path(ROOT_DIR + "_nami_and_kalifa_gif/")
-#
-#     #     files = []
-#
-#     #     # Iterate directory
-#     #     for path in os.listdir(dir_path):
-#     #         # check if current path is a file
-#     #         if os.path.isfile(os.path.join(dir_path, path)):
-#     #             files.append(path)
-#
-#     #     random_index = random.randint(0, len(files) -1)
-#
-#     #     random_file = files[random_index]
-#
-#     #     dir_path = "_nami_and_kalifa_gif/" + random_file
-#
-#     #     embed = discord.Embed(title="Nami & Kalifa Gif", description="Nami The Cat Burgalar & Kalifa of CP9")
-#     #     file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#     #     embed.set_image(url="attachment://{}".format(random_file))
-#
-#     #     await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="namirobing", aliases=["nrg", "gif nami & robin", "nami and robin gif", "gif nami and robin"])
-#     async def nami_and_robin_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_nami_and_robin_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_nami_and_robin_gif/" + random_file
-#
-#         embed = discord.Embed(title="Nami & Robin Gif", description="Nami The Cat Burgalar")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="nojikog", aliases=["nog", "gif nojiko"])
-#     async def nojiko_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_nojiko_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_nojiko_gif/" + random_file
-#
-#         embed = discord.Embed(title="Nojiko Gif", description="Nojiko The Sister Of Nami")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="peronag", aliases=["pg", "gif perona"])
-#     async def perona_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_perona_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_perona_gif/" + random_file
-#
-#         embed = discord.Embed(title="Perona Gif", description="Perona The Holo Holo Girl")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="rebeccag", aliases=["rg", "gif rebecca"])
-#     async def rebecca_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_rebecca_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_rebecca_gif/" + random_file
-#
-#         embed = discord.Embed(title="Rebecca Gif", description="Rebecca The Gladiator")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="robing", aliases=["rog", "gif robin"])
-#     async def robin_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_robin_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_robin_gif/" + random_file
-#
-#         embed = discord.Embed(title="Robin Gif", description="Robin The Archaeologist")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="sidewomeng", aliases=["swg", "gif side women"])
-#     async def side_women_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_side_women_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_side_women_gif/" + random_file
-#
-#         embed = discord.Embed(title="Side Women Gif", description="Side Women From One Piece")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="vivig", aliases=["vg", "gif vivi"])
-#     async def vivi_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_vivi_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_vivi_gif/" + random_file
-#
-#         embed = discord.Embed(title="Vivi Gif", description="Vivi The Alabasta Princess")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-#     @commands.command(name="yamatog", aliases=["yg", "gif yamato"])
-#     async def yamato_gif(self, ctx):
-#         dir_path = pathlib.Path(ROOT_DIR + "_yamato_gif/")
-#
-#         files = []
-#
-#         # Iterate directory
-#         for path in os.listdir(dir_path):
-#             # check if current path is a file
-#             if os.path.isfile(os.path.join(dir_path, path)):
-#                 files.append(path)
-#
-#         random_index = random.randint(0, len(files) -1)
-#
-#         random_file = files[random_index]
-#
-#         dir_path = "_yamato_gif/" + random_file
-#
-#         embed = discord.Embed(title="Yamato Gif", description="Kazoki Odens Successor")
-#         file = discord.File(ROOT_DIR + dir_path, filename=random_file)
-#         embed.set_image(url="attachment://{}".format(random_file))
-#
-#         await ctx.send(file=file, embed=embed)
-#
-# async def setup(bot):
-#     await bot.add_cog(HentaiGif(bot))
+# bot/cogs/gif.py
+
+from discord import app_commands, Interaction
+from discord.ext import commands
+import logging
+
+from .utils.base_cog import BaseAnimeCog
+from .utils.handlers import CharacterInfo
+from .utils.constants import CHARACTER_DESCRIPTIONS
+
+logger = logging.getLogger('GifCogs')
+
+class GifCog(BaseAnimeCog):
+    """Cog for animated GIF images"""
+
+    def __init__(self, bot: commands.Bot):
+        super().__init__(bot, "./images/gifs/")
+        self.load_gif_characters()
+        self.gif_group = app_commands.Group(
+            name="gif",
+            description="Get character GIFs"
+        )
+        self.register_slash_commands()
+
+    def load_gif_characters(self):
+        """Load GIF versions of characters"""
+        for source, characters in CHARACTER_DESCRIPTIONS.items():
+            for char_name, (title, description) in characters.items():
+                gif_name = f"{char_name}_gif"
+                self.characters[gif_name] = CharacterInfo(
+                    name=gif_name,
+                    title=f"{title} Gif",
+                    description=f"Animated GIF - {description}",
+                    folder=f"{source}/gifs/{char_name}",
+                    aliases=[f"gif_{char_name}", f"{char_name}-gif"],
+                    source=source.replace('_', ' ').title()
+                )
+
+    def register_slash_commands(self):
+        """Register slash commands for all GIF characters"""
+        # Series choices
+        series_choices = [
+            app_commands.Choice(name=name.replace('_', ' ').title(), value=name)
+            for name in CHARACTER_DESCRIPTIONS.keys()
+        ]
+
+        @self.gif_group.command(name="show")
+        @app_commands.describe(
+            series="Choose a series",
+            character_name="Type the character's name"
+        )
+        @app_commands.choices(series=series_choices)
+        async def gif_command(
+            interaction: Interaction,
+            series: str,
+            character_name: str
+        ):
+            """Get a character GIF from a specific series"""
+            # Get characters for the selected series
+            search_name = character_name.lower()
+            series_chars = {
+                name: info for name, info in self.characters.items()
+                if info.source.lower().replace(' ', '_') == series.lower()
+            }
+
+            # Find the closest matching character
+            matched_char = None
+            for name, info in series_chars.items():
+                base_name = name.replace('_gif', '').lower()
+                if (base_name == search_name or
+                    search_name in base_name or
+                    search_name in info.title.lower()):
+                    matched_char = info
+                    break
+
+            if matched_char:
+                await self.send_character_image(interaction, matched_char)
+            else:
+                # Get available characters for the error message
+                available_chars = "\n".join(
+                    f"• {info.title.replace(' Gif', '')}"
+                    for info in series_chars.values()
+                )
+                await interaction.response.send_message(
+                    f"Character '{character_name}' not found in {series.replace('_', ' ').title()}.\n\n"
+                    f"Available characters:\n{available_chars}",
+                    ephemeral=True
+                )
+
+async def setup(bot: commands.Bot) -> None:
+    """Setup function to add cog to bot"""
+    try:
+        cog = GifCog(bot)
+        await bot.add_cog(cog)
+        bot.tree.add_command(cog.gif_group)
+        logger.info("Successfully loaded gif cog")
+    except Exception as e:
+        logger.error(f"Error loading gif cog: {e}")
+        raise
