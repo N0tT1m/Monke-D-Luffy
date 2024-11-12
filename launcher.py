@@ -47,45 +47,32 @@ async def shutdown_handler(bot: HentaiBot, killer: GracefulKiller) -> None:
         raise
 
 
-async def main() -> None:
-    """
-    Main entry point for the bot.
-    Handles initialization, running, and graceful shutdown.
-    """
-    bot: Optional[HentaiBot] = None
-    killer = GracefulKiller()
-
+async def main():
+    """Main entry point for the bot."""
     try:
-        # Initialize the bot
-        logger.info("Initializing bot...")
         bot = HentaiBot()
-
-        # Create shutdown task
-        shutdown_task = asyncio.create_task(shutdown_handler(bot, killer))
-
-        # Start the bot
-        logger.info("Starting bot...")
-        await bot.start()
-
+        async with bot:
+            await bot.start()
+    except KeyboardInterrupt:
+        logger.info("Received keyboard interrupt, shutting down...")
+        if bot:
+            await bot.close()
     except Exception as e:
         logger.error(f"Fatal error occurred: {e}", exc_info=e)
         if bot:
-            try:
-                await bot.close()
-            except Exception as close_error:
-                logger.error(f"Error during emergency shutdown: {close_error}", exc_info=close_error)
+            await bot.close()
         raise
-
     finally:
-        # Final cleanup
-        if bot and not bot.is_closed():
-            try:
-                await bot.close()
-            except Exception as e:
-                logger.error(f"Error during final cleanup: {e}", exc_info=e)
-
         logger.info("Bot shutdown complete")
 
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        pass  # Handle clean exit on Ctrl+C
+    except Exception as e:
+        logger.critical(f"Failed to start bot: {e}", exc_info=e)
+        sys.exit(1)
 
 def run_bot() -> None:
     """Entry point with proper error handling."""
@@ -109,11 +96,3 @@ def run_bot() -> None:
         except Exception as e:
             logger.error(f"Error closing event loop: {e}", exc_info=e)
         logger.info("Shutdown complete")
-
-
-if __name__ == "__main__":
-    try:
-        run_bot()
-    except Exception as e:
-        logger.critical(f"Failed to start bot: {e}", exc_info=e)
-        sys.exit(1)

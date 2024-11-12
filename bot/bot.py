@@ -69,8 +69,14 @@ class HentaiBot(commands.Bot):
         """Initialize bot setup."""
         logger.info("Starting bot setup...")
         try:
+            # Load cogs first
             await self._load_cogs()
-            # Sync commands
+            logger.info("Cogs loaded successfully!")
+
+            # Wait a moment before syncing commands
+            await asyncio.sleep(1)
+
+            # Now sync commands
             logger.info("Syncing commands...")
             await self.tree.sync()
             logger.info("Commands synced successfully!")
@@ -109,9 +115,12 @@ class HentaiBot(commands.Bot):
         """Start the bot with error handling."""
         try:
             logger.info("Starting bot...")
-            # Sync commands again on start
-            await self.tree.sync()
+            # Login first
             await super().start(self.config.token, reconnect=True)
+            # Then sync commands
+            logger.info("Syncing commands...")
+            await self.tree.sync()
+            logger.info("Commands synced!")
         except Exception as e:
             logger.error(f"Failed to start bot: {e}")
             raise
