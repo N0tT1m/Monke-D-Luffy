@@ -770,3 +770,174 @@ task: <Task pending name='Task-33' coro=<Client.close.<locals>._close() done, de
 task: <Task pending name='Task-2' coro=<shutdown_handler() running at E:\workspace\bots\Monke-d-luffy\launcher.py:43> wait_for=<Task pending name='Task-33' coro=<Client.close.<locals>._close() done, defined at E:\workspace\bots\Monke-d-luffy\Lib\site-packages\discord\client.py:737> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[Task.task_wakeup()]>>
 2024-11-11 20:30:23,830 - asyncio - ERROR - Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x000001A5EC224FD0>
+2024-11-11 20:42:18,270 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:42:18,271 - BotLauncher - ERROR - Fatal error occurred: Required environment variable DISCORD_TOKEN is not set
+Traceback (most recent call last):
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 61, in main
+    bot = HentaiBot()
+          ^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 52, in __init__
+    self.config = BotConfig()
+                  ^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 31, in __init__
+    self.token: str = self._get_required_env("DISCORD_TOKEN")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 40, in _get_required_env
+    raise ValueError(f"Required environment variable {key} is not set")
+ValueError: Required environment variable DISCORD_TOKEN is not set
+2024-11-11 20:42:18,271 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:42:18,271 - BotLauncher - CRITICAL - Fatal error in main loop: Required environment variable DISCORD_TOKEN is not set
+Traceback (most recent call last):
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 98, in run_bot
+    loop.run_until_complete(main())
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 61, in main
+    bot = HentaiBot()
+          ^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 52, in __init__
+    self.config = BotConfig()
+                  ^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 31, in __init__
+    self.token: str = self._get_required_env("DISCORD_TOKEN")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 40, in _get_required_env
+    raise ValueError(f"Required environment variable {key} is not set")
+ValueError: Required environment variable DISCORD_TOKEN is not set
+2024-11-11 20:42:18,272 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:42:37,098 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:42:37,099 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:42:37,099 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:42:37,099 - HentaiBot - ERROR - Failed to start bot: '_MissingSentinel' object has no attribute 'is_set'
+2024-11-11 20:42:37,099 - BotLauncher - ERROR - Fatal error occurred: '_MissingSentinel' object has no attribute 'is_set'
+Traceback (most recent call last):
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 68, in main
+    await bot.start()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 113, in start
+    await self.tree.sync()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1129, in sync
+    data = await self._http.bulk_upsert_global_commands(self.client.application_id, payload=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/http.py", line 618, in request
+    if not self._global_over.is_set():
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: '_MissingSentinel' object has no attribute 'is_set'
+2024-11-11 20:42:37,101 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:42:37,101 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:42:37,101 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:42:37,101 - BotLauncher - CRITICAL - Fatal error in main loop: '_MissingSentinel' object has no attribute 'is_set'
+Traceback (most recent call last):
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 98, in run_bot
+    loop.run_until_complete(main())
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 68, in main
+    await bot.start()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 113, in start
+    await self.tree.sync()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1129, in sync
+    data = await self._http.bulk_upsert_global_commands(self.client.application_id, payload=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/http.py", line 618, in request
+    if not self._global_over.is_set():
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: '_MissingSentinel' object has no attribute 'is_set'
+2024-11-11 20:42:37,102 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:42:37,108 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at /home/timmy/workspace/bots/Monke-D-Luffy/launcher.py:39> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-11 20:44:19,283 - BotLauncher - INFO - Initializing bot...
+2024-11-11 20:44:19,284 - BotLauncher - INFO - Starting bot...
+2024-11-11 20:44:19,284 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:44:19,284 - HentaiBot - ERROR - Failed to start bot: '_MissingSentinel' object has no attribute 'is_set'
+2024-11-11 20:44:19,284 - BotLauncher - ERROR - Fatal error occurred: '_MissingSentinel' object has no attribute 'is_set'
+Traceback (most recent call last):
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 68, in main
+    await bot.start()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 113, in start
+    await self.tree.sync()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1129, in sync
+    data = await self._http.bulk_upsert_global_commands(self.client.application_id, payload=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/http.py", line 618, in request
+    if not self._global_over.is_set():
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: '_MissingSentinel' object has no attribute 'is_set'
+2024-11-11 20:44:19,285 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:44:19,285 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:44:19,285 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:44:19,285 - BotLauncher - CRITICAL - Fatal error in main loop: '_MissingSentinel' object has no attribute 'is_set'
+Traceback (most recent call last):
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 98, in run_bot
+    loop.run_until_complete(main())
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/launcher.py", line 68, in main
+    await bot.start()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/bot/bot.py", line 113, in start
+    await self.tree.sync()
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1129, in sync
+    data = await self._http.bulk_upsert_global_commands(self.client.application_id, payload=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/timmy/workspace/bots/Monke-D-Luffy/lib/python3.12/site-packages/discord/http.py", line 618, in request
+    if not self._global_over.is_set():
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: '_MissingSentinel' object has no attribute 'is_set'
+2024-11-11 20:44:19,286 - BotLauncher - INFO - Shutdown complete
+2024-11-11 20:44:19,293 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<shutdown_handler() running at /home/timmy/workspace/bots/Monke-D-Luffy/launcher.py:39> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-11 20:46:29,447 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:46:29,447 - discord.client - INFO - logging in using static token
+2024-11-11 20:46:29,792 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:46:29,803 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:46:29,803 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:46:29,807 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 20:46:29,807 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 20:46:29,809 - AnimeCogs - INFO - Successfully loaded anime cog
+2024-11-11 20:46:29,810 - HentaiBot - INFO - Loaded cog: anime
+2024-11-11 20:46:29,810 - HentaiBot - INFO - Cogs loaded successfully!
+2024-11-11 20:46:30,811 - HentaiBot - INFO - Syncing commands...
+2024-11-11 20:46:31,103 - HentaiBot - INFO - Commands synced successfully!
+2024-11-11 20:46:31,380 - HentaiBot - INFO - Shutting down bot...
+2024-11-11 20:46:31,381 - HentaiBot - INFO - Shutdown complete
+2024-11-11 20:46:31,381 - BotLauncher - INFO - Bot shutdown complete
+2024-11-11 20:48:04,407 - HentaiBot - INFO - Starting bot...
+2024-11-11 20:48:04,407 - discord.client - INFO - logging in using static token
+2024-11-11 20:48:04,814 - HentaiBot - INFO - Starting bot setup...
+2024-11-11 20:48:04,816 - HelpCog - INFO - Successfully loaded help cog
+2024-11-11 20:48:04,816 - HentaiBot - INFO - Loaded cog: help
+2024-11-11 20:48:04,818 - GifCogs - INFO - Successfully loaded gif cog
+2024-11-11 20:48:04,818 - HentaiBot - INFO - Loaded cog: gif
+2024-11-11 20:48:04,819 - AnimeCogs - INFO - Successfully loaded anime cog
+2024-11-11 20:48:04,819 - HentaiBot - INFO - Loaded cog: anime
+2024-11-11 20:48:04,819 - HentaiBot - INFO - Cogs loaded successfully!
+2024-11-11 20:48:05,821 - HentaiBot - INFO - Syncing commands...
+2024-11-11 20:48:06,196 - HentaiBot - INFO - Commands synced successfully!
+2024-11-11 20:48:08,041 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 2293d1a7104bae16787f22f0def863e0).
+2024-11-11 20:48:08,046 - HentaiBot - INFO - Connected to Discord (latency: 40ms)
+2024-11-11 20:48:10,204 - HentaiBot - INFO - Bot ready - Logged in as Monke D. Luffy#9746 (ID: 1006266287573438585)
+2024-11-11 20:48:10,204 - HentaiBot - INFO - Slash commands should be available now!
+2024-11-11 22:54:58,519 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-11 22:54:58,667 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 2293d1a7104bae16787f22f0def863e0.
+2024-11-11 22:54:58,667 - HentaiBot - INFO - Resumed Discord connection
+2024-11-12 01:04:24,753 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-12 01:04:24,885 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 2293d1a7104bae16787f22f0def863e0.
+2024-11-12 01:04:24,885 - HentaiBot - INFO - Resumed Discord connection
+2024-11-12 04:22:17,475 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-12 04:22:17,652 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 2293d1a7104bae16787f22f0def863e0.
+2024-11-12 04:22:17,652 - HentaiBot - INFO - Resumed Discord connection
+2024-11-12 05:05:25,990 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-12 05:05:26,142 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 2293d1a7104bae16787f22f0def863e0.
+2024-11-12 05:05:26,142 - HentaiBot - INFO - Resumed Discord connection
+2024-11-12 06:30:26,270 - HentaiBot - WARNING - Disconnected from Discord
+2024-11-12 06:30:26,415 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 2293d1a7104bae16787f22f0def863e0.
+2024-11-12 06:30:26,416 - HentaiBot - INFO - Resumed Discord connection
+2024-11-12 06:56:19,400 - AnimeHandlers - ERROR - Error accessing images/one_piece/robin: [Errno 2] No such file or directory: 'images/one_piece/robin'
+2024-11-12 06:56:19,400 - AnimeBaseCog - ERROR - Error sending image for robin: [Errno 2] No such file or directory: 'images/one_piece/robin'
+2024-11-12 07:00:30,900 - AnimeHandlers - ERROR - Error accessing images/one_piece/tashigi: [Errno 2] No such file or directory: 'images/one_piece/tashigi'
+2024-11-12 07:00:30,900 - AnimeBaseCog - ERROR - Error sending image for tashigi: [Errno 2] No such file or directory: 'images/one_piece/tashigi'
+2024-11-12 07:10:23,864 - HentaiBot - INFO - Shutting down bot...
+2024-11-12 07:10:23,865 - HentaiBot - INFO - Shutdown complete
+2024-11-12 07:10:23,865 - BotLauncher - INFO - Bot shutdown complete
