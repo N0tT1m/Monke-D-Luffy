@@ -2,10 +2,10 @@ CHARACTER_MAPPINGS = {
     "one_piece": {
         "luffy": ["monkey d luffy", "monkey_d_luffy", "luffy", "strawhat"],
         "zoro": ["roronoa zoro", "roronoa_zoro", "zoro"],
-        "nami": ["nami", "nami_(one_piece)"],
+        "nami": ['nami', 'cat_burglar', 'navigator', 'straw_hat_navigator'],
         "sanji": ["vinsmoke sanji", "vinsmoke_sanji", "sanji", "black leg"],
         "robin": ["nico robin", "nico_robin", "robin", "robin_(alabasta)", "robin_(cosplay)"],
-        "uta": ["uta", "uta_(one_piece)"],
+        "uta": ["uta", "uta_(one_piece)", 'world_diva', 'shanks_daughter'],
         "rebecca": ["rebecca", "rebecca_(one_piece)"],
         "carrot": ["carrot", "carrot_(one_piece)"],
         "bonney": ["jewelry bonney", "jewelry_bonney", "bonney"],
@@ -14,7 +14,7 @@ CHARACTER_MAPPINGS = {
         "vivi": ["nefertari vivi", "nefertari_vivi", "vivi"],
         "vinsmoke_reiju": ["vinsmoke reiju", "vinsmoke_reiju", "reiju"],
         "charlotte_linlin": ["big mom", "big_mom", "charlotte_linlin", "charlotte linlin", "linlin"],
-        "kuina": ["shimotsuki kuina", "shimotsuki_kuina", "kuina"],
+        "kuina": ['kuina', 'koushirou_daughter', 'wado_ichimonji_original'],
         "charlotte_smoothie": ["charlotte_smoothie", "charlotte smoothie", "smoothie"],
         "shirahoshi": ["shirahoshi", "princess shirahoshi", "princess_shirahoshi"],
         "kouzuki_hiyori": ["hiyori", "kouzuki hiyori", "kouzuki_hiyori"],
@@ -37,7 +37,40 @@ CHARACTER_MAPPINGS = {
         "stussy": ["stussy", "stussy_(one_piece)"],
         "tashigi": ["tashigi"],
         "hina": ["hina", "hina_(one_piece)"],
-        "isuka": ["isuka", "isuka_(one_piece)"]
+        "isuka": ["isuka", "isuka_(one_piece)"],
+        # Adding new characters that weren't in the original list
+        "ain": ["ain", "ain_(one_piece)"],
+        "ann": ["ann", "ann_(one_piece)"],
+        "aphelandra": ["aphelandra", "aphelandra_(one_piece)"],
+        "baccarat": ["baccarat", "baccarat_(one_piece)"],
+        "belo_betty": ["belo betty", "belo_betty"],
+        "carina": ["carina", "carina_(one_piece)"],
+        "charlotte_galette": ["charlotte galette", "charlotte_galette", "galette"],
+        "conis": ["conis", "conis_(one_piece)"],
+        "domino": ["domino", "domino_(one_piece)"],
+        "ein": ["ein", "ein_(one_piece)"],
+        "honey_queen": ["honey queen", "honey_queen"],
+        "kalifa": ["kalifa", "kalifa_(one_piece)"],
+        "koala": ["koala", "koala_(one_piece)"],
+        "laki": ["laki", "laki_(one_piece)"],
+        "lily_enstomach": ["lily enstomach", "lily_enstomach"],
+        "makino": ["makino", "makino_(one_piece)"],
+        "marguerite": ["marguerite", "marguerite_(one_piece)"],
+        "marigold": ["marigold", "marigold_(one_piece)"],
+        "mero": ["mero", "mero_(one_piece)"],
+        "miss_valentine": ["miss valentine", "miss_valentine"],
+        "moda": ["moda", "moda_(one_piece)"],
+        "mousse": ["mousse", "mousse_(one_piece)"],
+        "ro": ["ro", "ro_(one_piece)"],
+        "sadi": ["sadi", "sadi_(one_piece)"],
+        "sandersonia": ["sandersonia", "boa sandersonia", "boa_sandersonia"],
+        "stella": ["stella", "stella_(one_piece)"],
+        "sugar": ["sugar", "sugar_(one_piece)"],
+        "tama": ["tama", "tama_(one_piece)"],
+        "ulti": ["ulti", "ulti_(one_piece)"],
+        "victoria_cindry": ["victoria cindry", "victoria_cindry", "cindry"],
+        "viola": ["viola", "viola_(one_piece)"],
+        "yamato": ["yamato", "yamato_(one_piece)"]
     },
 
     "dota2": {
@@ -483,9 +516,14 @@ CHARACTER_MAPPINGS = {
 
 CHARACTER_DESCRIPTIONS = {
     "one_piece": {
-        "nami": ("Nami", "The Cat Burglar and Navigator of the Straw Hat Pirates"),
+        'nami': (
+            "Nami",
+            "The Straw Hat Pirates' navigator and cartographer. Known as 'Cat Burglar' Nami, "
+            "she is the third member of the Straw Hat crew and dreams of mapping the entire world."
+        ),
         "robin": ("Nico Robin", "The Devil Child and Archaeologist of the Straw Hat Pirates"),
         "boa_hancock": ("Boa Hancock", "The Pirate Empress and Captain of the Kuja Pirates"),
+        'uta': ("Uta", "Known as the World's Greatest Diva, Uta is a famous singer and Shanks' adopted daughter. She was introduced in One Piece Film: Red as the main character and possesses the power of the Uta Uta no Mi (Song-Song Fruit)."),
         "vivi": ("Nefertari Vivi", "Princess of Alabasta and Former Straw Hat Companion"),
         "vinsmoke_reiju": ("Vinsmoke Reiju", "The Poison Pink Princess of the Germa 66"),
         "charlotte_linlin": ("Charlotte Linlin", "Big Mom, Captain of the Big Mom Pirates"),
@@ -504,7 +542,12 @@ CHARACTER_DESCRIPTIONS = {
         "carrot": ("Carrot", "The Moon Lion Warrior of the Mink Tribe"),
         "bonney": ("Jewelry Bonney", "The Big Eater and Captain of the Bonney Pirates"),
         "baby_5": ("Baby 5", "The Living Weapon and Former Donquixote Pirate"),
-        "kuina": ("Kuina", "The Legendary Swordswoman and Zoro's Childhood Friend"),
+        'kuina': (
+            "Kuina",
+            "Zoro's childhood friend and rival from his dojo days. Daughter of Koushirou and the "
+            "original owner of the Wado Ichimonji sword. Her death deeply influenced Zoro's dream "
+            "to become the world's greatest swordsman."
+        ),
         "charlotte_smoothie": ("Charlotte Smoothie", "Sweet Commander of the Big Mom Pirates"),
         "catarina_devon": ("Catarina Devon", "The Crescent Moon Hunter of the Blackbeard Pirates"),
         "charlotte_flampe": ("Charlotte Flampe", "Leader of the Special Forces and Charlotte Family Member"),
@@ -516,6 +559,43 @@ CHARACTER_DESCRIPTIONS = {
         "isuka": ("Isuka", "The Nailing Marine and Former Instructor"),
         "vegapunk_atlas": ("Vegapunk Atlas", "Combat Satellite of Dr. Vegapunk"),
         "vegapunk_york": ("Vegapunk York", "Analysis Satellite of Dr. Vegapunk"),
+        "ain": ("Ain", "Former Marine Vice Admiral Zephyr's subordinate and user of the Mode Mode no Mi"),
+        "ann": ("Ann", "A skilled cook from the Gran Tesoro and Festa's former subordinate"),
+        "aphelandra": ("Aphelandra", "A towering member of the Kuja Pirates known for her innocent personality"),
+        "baccarat": ("Baccarat", "The Lucky Lucky Fruit user and executive of Gran Tesoro"),
+        "belo_betty": (
+        "Belo Betty", "The East Army Commander of the Revolutionary Army and user of the Pump-Pump Fruit"),
+        "carina": ("Carina", "The clever thief and former partner of Nami known as the 'Ghost Lady'"),
+        "charlotte_galette": (
+        "Charlotte Galette", "The 18th daughter of the Charlotte Family with butter-based abilities"),
+        "conis": ("Conis", "The kind-hearted Skypiean who helped the Straw Hats in Skypiea"),
+        "domino": ("Domino", "The Chief Guard of Impel Down's staff unit"),
+        "ein": ("Ein", "A member of the Neo Marines and one of Z's trusted subordinates"),
+        "honey_queen": ("Honey Queen", "A former Baroque Works agent with the codename Mr. 8's partner"),
+        "kalifa": ("Kalifa", "Former CP9 member and user of the Bubble-Bubble Fruit"),
+        "koala": ("Koala", "A high-ranking officer of the Revolutionary Army and Fish-Man Karate practitioner"),
+        "laki": ("Laki", "A Shandian warrior who fought to reclaim Upper Yard"),
+        "lily_enstomach": (
+        "Lily Enstomach", "A giant girl who can change her size at will, also known as 'Lily the Glutton'"),
+        "makino": ("Makino", "The kind bartender from Luffy's home village who helped raise him"),
+        "marguerite": (
+        "Marguerite", "A skilled archer of the Kuja Pirates and one of Luffy's first friends on Amazon Lily"),
+        "marigold": ("Marigold", "Boa Hancock's younger sister and one of the Gorgon Sisters"),
+        "mero": ("Mero", "A member of the Kuja Pirates known for her archery skills"),
+        "miss_valentine": ("Miss Valentine", "Former Baroque Works Officer Agent with the Kilo-Kilo Fruit ability"),
+        "moda": ("Moda", "A young milk maiden from Thriller Bark who befriended Brook"),
+        "mousse": ("Mousse", "A member of the Kuja Pirates skilled in using Color of Arms Haki"),
+        "ro": ("Ro", "A member of the Kuja Pirates and skilled warrior of Amazon Lily"),
+        "sadi": ("Sadi", "The Chief Guard of Impel Down known for her sadistic personality"),
+        "sandersonia": ("Boa Sandersonia", "The middle Gorgon sister with Snake-Snake Fruit powers"),
+        "stella": ("Stella", "A famous actress from Water 7 known for her dramatic performances"),
+        "sugar": ("Sugar", "A key member of the Donquixote Pirates with the power to turn people into toys"),
+        "tama": ("Tama", "A young kunoichi from Wano with the ability to tame animals using kibi dango"),
+        "ulti": ("Ulti", "A high-ranking member of the Beast Pirates and one of the Tobiroppo"),
+        "victoria_cindry": ("Victoria Cindry", "Dr. Hogback's zombie servant and former famous actress"),
+        "viola": (
+        "Viola", "Former princess of Dressrosa with the power to see through anything using the Glare-Glare Fruit"),
+        "yamato": ("Yamato", "Kaido's offspring who chose to ally with the Straw Hats and carries Oden's will"),
     },
 
     "naruto": {
