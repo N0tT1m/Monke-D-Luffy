@@ -8,3 +8,10 @@ hentai.zip
 Scripts/
 Include/
 Lib/
+bot.log
+logs/bot.log
+logs/bot.log.1
+logs/bot.log.2
+logs/bot.log.3
+bot/cogs/__pycache__/
+bot/cogs/utils/__pycache__/

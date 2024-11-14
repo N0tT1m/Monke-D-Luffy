@@ -305,50 +305,6 @@ class AnimeCog(BaseAnimeCog):
                 except:
                     logger.error("Could not send error message - interaction may have expired")
 
-        @self.character_group.command(name="show")
-        @app_commands.describe(
-            series="Choose a series",
-            character_name="Choose or type the character's name"
-        )
-        @app_commands.choices(series=series_choices)
-        async def character_command(
-                interaction: Interaction,
-                series: str,
-                character_name: str
-        ):
-            """Get a character image from a specific series"""
-            try:
-                logger.info(f"=== Character command called ===")
-                logger.info(f"Series: '{series}'")
-                logger.info(f"Character name: '{character_name}'")
-
-                # Defer the response immediately
-                await interaction.response.defer()
-
-                # Find the character
-                character = self.find_character(series, character_name)
-
-                if character is None:
-                    await interaction.followup.send(
-                        f"Character '{character_name}' not found in {series}.",
-                        ephemeral=True
-                    )
-                    return
-
-                # Send the character image using the base cog method
-                # Pass already_deferred=True since we already deferred the interaction
-                await self.send_character_image(interaction, character, already_deferred=True)
-
-            except Exception as e:
-                logger.exception(f"Error in character command: {str(e)}")
-                try:
-                    await interaction.followup.send(
-                        "An error occurred while processing your request.",
-                        ephemeral=True
-                    )
-                except:
-                    logger.error("Could not send error message - interaction may have expired")
-
         @character_command.autocomplete('character_name')
         async def character_autocomplete(
                 interaction: Interaction,
