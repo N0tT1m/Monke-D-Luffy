@@ -17,7 +17,6 @@ logger = setup_logging()
 class AnimeCog(BaseAnimeCog):
     """Combined cog for all anime/game characters"""
 
-
     def __init__(self, bot: commands.Bot):
         super().__init__(bot, "./hentai/")
         logger.info("=== Initializing AnimeCog ===")
@@ -30,7 +29,6 @@ class AnimeCog(BaseAnimeCog):
         self.register_slash_commands()
         self.setup_random_command()
         logger.info("AnimeCog initialization complete")
-
 
     def has_valid_images(self, char_folder: str) -> bool:
         """Check if character folder exists and contains valid images"""
@@ -89,6 +87,10 @@ class AnimeCog(BaseAnimeCog):
         if not series:
             logger.warning("Attempted to normalize None or empty series name")
             return ""
+
+        # Handle special case for dota2
+        if series.lower() in ['dota2', 'dota 2']:
+            return 'dota2'
 
         normalized = series.lower().replace(' ', '_').strip()
         logger.debug(f"Series name normalization: '{series}' -> '{normalized}'")
@@ -218,7 +220,12 @@ class AnimeCog(BaseAnimeCog):
         # Create series choices
         series_choices = []
         for name in CHARACTER_DESCRIPTIONS.keys():
-            display_name = name.replace('_', ' ').title()
+            # Special handling for Dota 2
+            if name.lower() == 'dota2':
+                display_name = 'Dota 2'
+            else:
+                display_name = name.replace('_', ' ').title()
+
             choice = app_commands.Choice(name=display_name, value=name)
             series_choices.append(choice)
             logger.debug(f"Created series choice: display='{display_name}' value='{name}'")
@@ -284,18 +291,6 @@ class AnimeCog(BaseAnimeCog):
                     selected_series = interaction.namespace.series
                     logger.info(f"Found selected series from namespace: '{selected_series}'")
 
-                # If not in namespace, try to get from raw options
-                if not selected_series and hasattr(interaction, 'data'):
-                    options = interaction.data.get('options', [])
-                    logger.debug(f"Raw interaction options: {options}")
-
-                elif hasattr(interaction, 'data'):
-                    options = interaction.data.get('options', [])
-                    for option in options:
-                        if isinstance(option, dict) and option.get('name') == 'series':
-                            selected_series = option.get('value')
-                            break
-
                 if not selected_series:
                     logger.warning("No series selected in autocomplete")
                     return []
@@ -321,7 +316,6 @@ class AnimeCog(BaseAnimeCog):
             except Exception as e:
                 logger.exception(f"Error in character autocomplete: {str(e)}")
                 return []
-
 
 async def setup(bot: commands.Bot) -> None:
     """Setup function to add cog to bot"""
