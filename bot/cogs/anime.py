@@ -5,6 +5,7 @@ from discord import app_commands, Interaction
 from discord.ext import commands
 import logging
 from typing import Dict, List, Optional
+from pathlib import Path
 
 from .utils.base_cog import BaseAnimeCog
 from .utils.handlers import create_character_info, CharacterInfo
