@@ -248,7 +248,7 @@ class AnimeCog(BaseAnimeCog):
 
         # Create series choices with proper display names
         series_choices = []
-        for name in CHARACTER_DESCRIPTIONS.keys():
+        for name in CHARACTER_MAPPINGS.keys():  # Changed from CHARACTER_DESCRIPTIONS to CHARACTER_MAPPINGS
             # Handle Dota 2 specially
             if name.lower() == 'dota2':
                 display_name = 'Dota 2'
@@ -272,16 +272,12 @@ class AnimeCog(BaseAnimeCog):
                 series: str,
                 character_name: str
         ):
-            """Get a character image from a specific series"""
             try:
                 logger.info(f"=== Character command called ===")
                 logger.info(f"Series: '{series}'")
                 logger.info(f"Character name: '{character_name}'")
 
-                # Defer the response immediately
                 await interaction.response.defer()
-
-                # Find the character
                 character = self.find_character(series, character_name)
 
                 if character is None:
@@ -291,8 +287,6 @@ class AnimeCog(BaseAnimeCog):
                     )
                     return
 
-                # Send the character image using the base cog method
-                # Pass already_deferred=True since we already deferred the interaction
                 await self.send_character_image(interaction, character, already_deferred=True)
 
             except Exception as e:

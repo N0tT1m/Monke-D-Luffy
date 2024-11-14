@@ -27,11 +27,52 @@ class CharacterHelpCog(commands.Cog, name="Help Commands"):
 
     def setup_series_commands(self):
         """Setup all series-related commands"""
-
         @self.series_group.command(name="list")
         async def series_list(interaction: discord.Interaction):
             """List all available series and their commands"""
-            await self._send_series_list(interaction)
+            embed = discord.Embed(
+                title="Available Series/Games",
+                description="Use `/series show <name> [page]` to see characters from a specific series\n"
+                           "For example: `/series show one_piece 1`\n\n"
+                           "**Commands Format:**\n"
+                           "• `/character show <series> <character>` - Get a character image\n"
+                           "• `/gif show <series> <character>` - Get an animated GIF\n\n"
+                           "Example: `/character show one_piece nami`",
+                color=discord.Color.blue()
+            )
+
+            # Update the categorization to properly include Dota 2
+            anime_series = [
+                "One Piece", "Naruto", "Fairy Tail", "Dragon Ball",
+                "Attack on Titan", "Demon Slayer", "Jujutsu Kaisen",
+                "Cowboy Bebop", "Spy x Family", "One Punch Man",
+                "Hunter x Hunter", "Fullmetal Alchemist",
+                "My Hero Academia", "JoJo's Bizarre Adventure",
+                "Konosuba", "Lycoris Recoil", "Hatsune Miku"
+            ]
+
+            games = ["League of Legends", "Dota 2", "Pokemon"]  # Updated to show "Dota 2" properly
+
+            embed.add_field(
+                name="📺 Anime Series",
+                value="\n".join(f"• {name}" for name in sorted(anime_series)),
+                inline=False
+            )
+
+            embed.add_field(
+                name="🎮 Games",
+                value="\n".join(f"• {name}" for name in sorted(games)),
+                inline=False
+            )
+
+            embed.add_field(
+                name="💡 Tip",
+                value="Use `/series show <name> [page]` to see available characters in each series\n"
+                      "Example: `/series show dota2 1`",
+                inline=False
+            )
+
+            await interaction.response.send_message(embed=embed)
 
         @self.series_group.command(name="show")
         @app_commands.describe(
@@ -57,7 +98,7 @@ class CharacterHelpCog(commands.Cog, name="Help Commands"):
             app_commands.Choice(name="Lycoris Recoil", value="lycoris_recoil"),
             app_commands.Choice(name="Hatsune Miku", value="hatsune_miku"),
             app_commands.Choice(name="League of Legends", value="league_of_legends"),
-            app_commands.Choice(name="Dota 2", value="dota2"),  # Fixed display name
+            app_commands.Choice(name="Dota 2", value="dota2"),  # Fixed display name and value
             app_commands.Choice(name="Pokemon", value="pokemon")
         ])
         async def show_series(interaction: discord.Interaction, series_name: str, page: int = 1):
