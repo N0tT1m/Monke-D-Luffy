@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-# bot/cogs/base_cog.py
-
-=======
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
 import discord
 from discord.ext import commands
 import logging
 from typing import Dict, Optional
 
-<<<<<<< HEAD
-from .utils.handlers import CharacterInfo, ImageHandler, CharacterManager
-from .utils.constants import CHARACTER_MAPPINGS, CHARACTER_DESCRIPTIONS
-
-logger = logging.getLogger('AnimeBaseCog')
-=======
 from .handlers import CharacterInfo, ImageHandler
 
 logger = logging.getLogger('AnimeBaseCog')
 
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
 
 class BaseAnimeCog(commands.Cog):
     """Base cog for anime image commands"""
@@ -26,7 +14,7 @@ class BaseAnimeCog(commands.Cog):
     def __init__(self, bot: commands.Bot, root_dir: str):
         self.bot = bot
         self.image_handler = ImageHandler(root_dir)
-        self.character_manager = CharacterManager(CHARACTER_MAPPINGS, CHARACTER_DESCRIPTIONS)
+        self.characters: Dict[str, CharacterInfo] = {}
 
     async def send_character_image(self, interaction: discord.Interaction, character: CharacterInfo,
                                    already_deferred: bool = False):
@@ -47,8 +35,7 @@ class BaseAnimeCog(commands.Cog):
 
             embed = discord.Embed(
                 title=f"{character.title} ({character.source})",
-                description=character.description,
-                color=discord.Color.random()
+                description=character.description
             )
 
             file = discord.File(
@@ -76,25 +63,7 @@ class BaseAnimeCog(commands.Cog):
             logger.error(f"Interaction not found when sending image for {character.name}")
             return
 
-        except FileNotFoundError:
-            await interaction.response.send_message(
-                f"No images found for {character.title}",
-                ephemeral=True
-            )
         except Exception as e:
-<<<<<<< HEAD
-            logger.error(f"Error sending image for {character.name}: {e}")
-            await interaction.response.send_message(
-                f"Error retrieving image for {character.title}",
-                ephemeral=True
-            )
-
-    def get_character_list(self, series: str) -> str:
-        """Get formatted list of available characters for a series"""
-        characters = self.character_manager.get_characters_by_series(series)
-        if not characters:
-            return "No characters found for this series."
-=======
             logger.error(f"Error sending image for {character.name}: {e}", exc_info=True)
             try:
                 await interaction.followup.send(
@@ -132,9 +101,5 @@ class BaseAnimeCog(commands.Cog):
                         await ctx.send(file=file, embed=embed)
                     except Exception as e:
                         await ctx.send(f"Error retrieving image for {char_info.title}")
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
 
-        return "\n".join(
-            f"• {char.title} - {char.description.split('.')[0]}"
-            for char in sorted(characters, key=lambda x: x.title)
-        )
+            self.__cog_commands__ = self.__cog_commands__ + (character_command,)

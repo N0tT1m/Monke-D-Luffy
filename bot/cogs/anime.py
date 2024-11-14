@@ -1,40 +1,27 @@
 import random
 
 import discord
-<<<<<<< HEAD
-from discord import app_commands
-=======
 from discord import app_commands, Interaction
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
 from discord.ext import commands
 import logging
 from typing import Dict, List, Optional
 
-<<<<<<< HEAD
-from .base_cog import BaseAnimeCog
-from .utils.constants import VALID_SERIES, get_series_display_name
-=======
 from .utils.base_cog import BaseAnimeCog
 from .utils.handlers import create_character_info, CharacterInfo
 from .utils.constants import CHARACTER_DESCRIPTIONS, CHARACTER_MAPPINGS
 from .utils.logging import setup_logging
 
 logger = setup_logging()
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
-
 
 
 class AnimeCog(BaseAnimeCog):
-    """Cog for static anime character images"""
+    """Combined cog for all anime/game characters"""
 
     def __init__(self, bot: commands.Bot):
         super().__init__(bot, "./hentai/")
-<<<<<<< HEAD
-=======
         logger.info("=== Initializing AnimeCog ===")
         self.characters = {}  # Using unique_id as key
         self.load_all_characters()
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
         self.character_group = app_commands.Group(
             name="character",
             description="Get character images"
@@ -43,15 +30,6 @@ class AnimeCog(BaseAnimeCog):
         self.setup_random_command()  # Add this line
         logger.info("AnimeCog initialization complete")
 
-<<<<<<< HEAD
-    def register_slash_commands(self):
-        """Register slash commands for all characters"""
-        # Series choices
-        series_choices = [
-            app_commands.Choice(name=get_series_display_name(name), value=name)
-            for name in sorted(VALID_SERIES)
-        ]
-=======
     def load_all_characters(self):
         """Load all character mappings with their unique descriptions"""
         logger.info("Starting character loading")
@@ -225,7 +203,6 @@ class AnimeCog(BaseAnimeCog):
             choice = app_commands.Choice(name=display_name, value=name)
             series_choices.append(choice)
             logger.debug(f"Created series choice: display='{display_name}' value='{name}'")
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
 
         @self.character_group.command(name="show")
         @app_commands.describe(
@@ -234,53 +211,11 @@ class AnimeCog(BaseAnimeCog):
         )
         @app_commands.choices(series=series_choices)
         async def character_command(
-<<<<<<< HEAD
-                interaction: discord.Interaction,
-=======
                 interaction: Interaction,
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
                 series: str,
                 character_name: str
         ):
             """Get a character image from a specific series"""
-<<<<<<< HEAD
-            # Identify character
-            series_name, char_key = self.character_manager.identify_character(character_name)
-
-            # If character not found in specified series
-            if not char_key or series_name != series:
-                await interaction.response.send_message(
-                    f"Character '{character_name}' not found in {get_series_display_name(series)}.\n\n"
-                    f"Available characters:\n{self.get_character_list(series)}",
-                    ephemeral=True
-                )
-                return
-
-            # Get character info and send image
-            char_info = self.character_manager.get_character(char_key)
-            if char_info:
-                await self.send_character_image(interaction, char_info)
-            else:
-                await interaction.response.send_message(
-                    f"Error retrieving character information.",
-                    ephemeral=True
-                )
-
-        @self.character_group.command(name="list")
-        @app_commands.describe(series="Choose a series to list characters from")
-        @app_commands.choices(series=series_choices)
-        async def list_command(
-                interaction: discord.Interaction,
-                series: str
-        ):
-            """List all available characters in a series"""
-            embed = discord.Embed(
-                title=f"Characters from {get_series_display_name(series)}",
-                description=self.get_character_list(series),
-                color=discord.Color.blue()
-            )
-            await interaction.response.send_message(embed=embed)
-=======
             try:
                 logger.info(f"=== Character command called ===")
                 logger.info(f"Series: '{series}'")
@@ -367,7 +302,6 @@ class AnimeCog(BaseAnimeCog):
             except Exception as e:
                 logger.exception(f"Error in character autocomplete: {str(e)}")
                 return []
->>>>>>> d83914c17f5472f3eec07a71ad0c8a1228f7a38e
 
 
 async def setup(bot: commands.Bot) -> None:
