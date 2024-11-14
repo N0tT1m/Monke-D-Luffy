@@ -1,118 +1,199 @@
-# bot/cogs/utils/handlers.py
 
-from pathlib import Path
+from dataclasses import dataclass
+from typing import List, Optional, Tuple, Dict
 import random
 import logging
-from dataclasses import dataclass, field
-from typing import List, Dict, Tuple, Optional
+from pathlib import Path
 
 logger = logging.getLogger('AnimeHandlers')
 
 
 @dataclass
 class CharacterInfo:
-    """Store character information"""
-    name: str
-    title: str
-    description: str
-    folder: str
-    source: str
-    aliases: List[str] = field(default_factory=list)
-
-
-def create_character_info(name: str, source: str, title: str, description: str, folder: str = None) -> CharacterInfo:
-    """Create a CharacterInfo object with proper defaults"""
-    if folder is None:
-        folder = f"{source}/{name}"
-
-    # Clean up the source name for display
-    clean_source = source.replace('_', ' ').title()
-
-    return CharacterInfo(
-        name=name,
-        title=title,
-        description=description,
-        folder=folder,
-        source=clean_source,
-        aliases=[f"{name}-{source}", f"{source}-{name}"]
-    )
+    """Character information class"""
+    name: str  # Character's internal name/ID
+    title: str  # Display name
+    description: str  # Character description
+    folder: str  # Image folder path
+    source: str  # Series name
+    aliases: List[str]  # Alternative names/spellings
 
 
 class ImageHandler:
     """Handle image file operations"""
 
-    VALID_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif'}
-
     def __init__(self, root_dir: str):
         self.root_dir = Path(root_dir)
         if not self.root_dir.exists():
-            self.root_dir.mkdir(parents=True, exist_ok=True)
+            logger.error(f"Root directory does not exist: {root_dir}")
+            raise FileNotFoundError(f"Directory not found: {root_dir}")
 
     def get_random_image(self, subfolder: str) -> Tuple[str, Path]:
-        """Get random image from specified subfolder"""
-        folder = self.root_dir / subfolder
-        try:
-            if not folder.exists():
-                raise FileNotFoundError(f"Folder not found: {folder}")
+        """Get a random image from specified subfolder"""
+        dir_path = self.root_dir / subfolder
 
-            image_files = [
-                f for f in folder.glob("*")
-                if f.suffix.lower() in self.VALID_EXTENSIONS
+        if not dir_path.exists():
+            logger.error(f"Subfolder does not exist: {dir_path}")
+            raise FileNotFoundError(f"Directory not found: {dir_path}")
+
+        try:
+            valid_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
+            files = [
+                p for p in dir_path.iterdir()
+                if (p.is_file() and
+                    p.suffix.lower() in valid_extensions and
+                    not p.name.startswith('.'))  # Filter out hidden files
             ]
 
-            if not image_files:
-                raise ValueError(f"No images found in {folder}")
+            if not files:
+                logger.error(f"No valid image files found in {dir_path}")
+                raise ValueError(f"No image files found in {dir_path}")
 
-            chosen_file = random.choice(image_files)
-            return chosen_file.name, chosen_file
+            random_file = random.choice(files)
+            logger.debug(f"Selected random file: {random_file}")
+            return random_file.name, random_file
 
         except Exception as e:
-            logger.error(f"Error getting random image from {subfolder}: {e}")
+            logger.error(f"Error accessing {dir_path}: {str(e)}", exc_info=True)
             raise
 
+def normalize_character_id(char_id: str) -> str:
+    """Normalize character ID to handle edge cases"""
+    return char_id.lower().strip().replace(' ', '_')
 
-class CharacterManager:
-    """Manage character data and mappings"""
 
-    def __init__(self, mappings: Dict, descriptions: Dict):
-        self.mappings = mappings
-        self.descriptions = descriptions
-        self._characters: Dict[str, CharacterInfo] = {}
-        self._load_characters()
+def create_character_info(
+        char_id: str,
+        source: str,
+        desc_data: Tuple[str, str],
+        mapping_data: Dict[str, List[str]]
+) -> Optional[CharacterInfo]:
+    """
+    Create a CharacterInfo object with all necessary data
 
-    def _load_characters(self):
-        """Load all characters from mappings and descriptions"""
-        for series, chars in self.descriptions.items():
-            for char_name, (title, desc) in chars.items():
-                aliases = self.mappings[series].get(char_name, [])
-                char_info = CharacterInfo(
-                    name=char_name,
-                    title=title,
-                    description=desc,
-                    folder=f"{series}/{char_name}",
-                    source=series.replace('_', ' ').title(),
-                    aliases=aliases
-                )
-                self._characters[char_name] = char_info
+    Args:
+        char_id: The character's identifier
+        source: The series name
+        desc_data: Tuple of (display_name, description)
+        mapping_data: Dictionary of character mappings for the series
 
-    def get_character(self, name: str) -> Optional[CharacterInfo]:
-        """Get character info by name"""
-        return self._characters.get(name)
+    Returns:
+        CharacterInfo object if successful, None if data is invalid
+    """
+    try:
+        # Normalize character ID
+        normalized_id = normalize_character_id(char_id)
 
-    def get_characters_by_series(self, series: str) -> List[CharacterInfo]:
-        """Get all characters from a specific series"""
-        return [
-            char for char in self._characters.values()
-            if char.source.lower() == series.replace('_', ' ').lower()
-        ]
+        # Handle empty or invalid input
+        if not all([char_id, source, desc_data]):
+            logger.error(f"Missing required data for character {char_id} in {source}")
+            return None
 
-    def identify_character(self, search_term: str) -> Tuple[Optional[str], Optional[str]]:
-        """Identify series and character from search term"""
-        search_term = search_term.lower()
+        # Special handling for edge cases like 'nami'
+        if normalized_id == 'nami':
+            logger.debug(f"Special handling for character: {char_id}")
+            # Ensure we have valid desc_data
+            if not desc_data:
+                desc_data = ("Nami", "Navigator of the Straw Hat Pirates")  # Default description
 
-        for series, characters in self.mappings.items():
-            for char_key, aliases in characters.items():
-                if any(alias in search_term for alias in aliases):
-                    return series, char_key
+        # Validate and unpack description data
+        if not isinstance(desc_data, (tuple, list)) or len(desc_data) != 2:
+            logger.error(f"Invalid desc_data format for {char_id}: {desc_data}")
+            # Try to recover with available data
+            if isinstance(desc_data, str):
+                display_name = desc_data
+                description = "Character description unavailable"
+            else:
+                return None
+        else:
+            display_name, description = desc_data
 
-        return None, None
+        # Get aliases with fallback
+        aliases = []
+        if isinstance(mapping_data, dict):
+            # Try both original and normalized ID
+            aliases = mapping_data.get(char_id, mapping_data.get(normalized_id, []))
+        if not aliases:
+            logger.warning(f"No aliases found for character {char_id} in {source}, using default")
+            aliases = [char_id, normalized_id, display_name.lower()]
+
+        # Create the folder path with normalization
+        folder = f"{source}/{normalized_id}"
+
+        # Create character info object
+        char_info = CharacterInfo(
+            name=normalized_id,
+            title=display_name,
+            description=description,
+            folder=folder,
+            source=source.replace('_', ' ').title(),
+            aliases=list(set(aliases))  # Remove duplicates
+        )
+
+        logger.debug(f"Successfully created CharacterInfo for {char_id} in {source}")
+        return char_info
+
+    except Exception as e:
+        logger.error(
+            f"Failed to create CharacterInfo for {char_id} in {source}: {str(e)}",
+            exc_info=True
+        )
+        return None
+
+
+def merge_character_data(descriptions: dict, mappings: dict) -> Dict[str, Tuple[dict, dict]]:
+    """
+    Merge character descriptions and mappings, handling edge cases
+
+    Args:
+        descriptions: Character descriptions dictionary
+        mappings: Character mappings dictionary
+
+    Returns:
+        Dictionary of merged character data
+    """
+    all_chars = {}
+
+    # Normalize all keys
+    norm_desc = {normalize_character_id(k): v for k, v in descriptions.items()}
+    norm_map = {normalize_character_id(k): v for k, v in mappings.items()}
+
+    # Merge data
+    all_char_ids = set(norm_desc.keys()) | set(norm_map.keys())
+    for char_id in all_char_ids:
+        desc = norm_desc.get(char_id)
+        mapping = norm_map.get(char_id)
+
+        if desc or mapping:  # Include if either exists
+            all_chars[char_id] = (desc, mapping)
+
+    return all_chars
+
+
+def merge_character_data(descriptions: dict, mappings: dict) -> Dict[str, Tuple[dict, dict]]:
+    """
+    Merge character descriptions and mappings, handling edge cases
+
+    Args:
+        descriptions: Character descriptions dictionary
+        mappings: Character mappings dictionary
+
+    Returns:
+        Dictionary of merged character data
+    """
+    all_chars = {}
+
+    # Normalize all keys
+    norm_desc = {normalize_character_id(k): v for k, v in descriptions.items()}
+    norm_map = {normalize_character_id(k): v for k, v in mappings.items()}
+
+    # Merge data
+    all_char_ids = set(norm_desc.keys()) | set(norm_map.keys())
+    for char_id in all_char_ids:
+        desc = norm_desc.get(char_id)
+        mapping = norm_map.get(char_id)
+
+        if desc or mapping:  # Include if either exists
+            all_chars[char_id] = (desc, mapping)
+
+    return all_chars
