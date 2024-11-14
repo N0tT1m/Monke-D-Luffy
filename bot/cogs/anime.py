@@ -21,6 +21,7 @@ class AnimeCog(BaseAnimeCog):
     def __init__(self, bot: commands.Bot):
         super().__init__(bot, "./hentai/")
         logger.info("=== Initializing AnimeCog ===")
+        self.root_dir = Path("./hentai/")
         self.characters = {}  # Using unique_id as key
         self.load_all_characters()
         self.character_group = app_commands.Group(
@@ -32,10 +33,11 @@ class AnimeCog(BaseAnimeCog):
         logger.info("AnimeCog initialization complete")
 
 
+
     def has_valid_images(self, char_folder: str) -> bool:
         """Check if character folder exists and contains valid images"""
         try:
-            dir_path = Path(self.root_dir) / char_folder
+            dir_path = self.root_dir / char_folder
             if not dir_path.exists():
                 return False
 
