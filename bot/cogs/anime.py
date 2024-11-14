@@ -5,6 +5,7 @@ from discord import app_commands, Interaction
 from discord.ext import commands
 import logging
 from typing import Dict, List, Optional
+from pathlib import Path
 
 from .utils.base_cog import BaseAnimeCog
 from .utils.handlers import create_character_info, CharacterInfo
@@ -20,6 +21,7 @@ class AnimeCog(BaseAnimeCog):
     def __init__(self, bot: commands.Bot):
         super().__init__(bot, "./hentai/")
         logger.info("=== Initializing AnimeCog ===")
+        self.root_dir = Path("./hentai/")
         self.characters = {}  # Using unique_id as key
         self.load_all_characters()
         self.character_group = app_commands.Group(
@@ -33,7 +35,7 @@ class AnimeCog(BaseAnimeCog):
     def has_valid_images(self, char_folder: str) -> bool:
         """Check if character folder exists and contains valid images"""
         try:
-            dir_path = Path(self.root_dir) / char_folder
+            dir_path = self.root_dir / char_folder
             if not dir_path.exists():
                 return False
 
@@ -56,29 +58,56 @@ class AnimeCog(BaseAnimeCog):
         total_characters = 0
         loaded_characters = 0
 
+        # First validate data structures
+        if not CHARACTER_DESCRIPTIONS or not CHARACTER_MAPPINGS:
+            logger.error("CHARACTER_DESCRIPTIONS or CHARACTER_MAPPINGS is empty")
+            return
+
         for source, descriptions in CHARACTER_DESCRIPTIONS.items():
+            if source not in CHARACTER_MAPPINGS:
+                logger.warning(f"No mapping data found for {source}, skipping")
+                continue
+
             mapping_data = CHARACTER_MAPPINGS[source]
             normalized_source = self.normalize_series_name(source)
             logger.info(f"Loading characters for {source} (normalized: {normalized_source})")
 
-            # First collect all character IDs from both mappings and descriptions
+            # Collect all unique character IDs
             all_char_ids = set(descriptions.keys()) | set(mapping_data.keys())
             total_characters += len(all_char_ids)
 
             for char_id in all_char_ids:
-                if char_id in descriptions and char_id in mapping_data:
+                try:
+                    # Get description data with fallback
+                    desc_data = descriptions.get(char_id)
+                    if not desc_data:
+                        # Try to construct basic description from mapping
+                        if char_id in mapping_data:
+                            desc_data = (char_id.title(), f"Character from {source}")
+                        else:
+                            continue
+
+                    # Get mapping data with fallback
+                    char_mapping = {char_id: mapping_data.get(char_id, [char_id])}
+
                     char_info = create_character_info(
                         char_id=char_id,
                         source=source,
-                        desc_data=descriptions[char_id],
-                        mapping_data={char_id: mapping_data[char_id]}
+                        desc_data=desc_data,
+                        mapping_data=char_mapping
                     )
+
                     if char_info and self.has_valid_images(char_info.folder):
-                        # Store with normalized series name in unique ID
                         unique_id = f"{normalized_source}:{char_id.lower()}"
                         self.characters[unique_id] = char_info
                         loaded_characters += 1
                         logger.debug(f"Loaded character {unique_id} -> {char_info.title}")
+                    else:
+                        logger.warning(f"Failed to load or validate character {char_id} from {source}")
+
+                except Exception as e:
+                    logger.error(f"Error loading character {char_id} from {source}: {e}")
+                    continue
 
         logger.info(f"Loaded {loaded_characters}/{total_characters} total characters")
 
