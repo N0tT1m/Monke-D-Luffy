@@ -17,6 +17,7 @@ logger = setup_logging()
 class AnimeCog(BaseAnimeCog):
     """Combined cog for all anime/game characters"""
 
+
     def __init__(self, bot: commands.Bot):
         super().__init__(bot, "./hentai/")
         logger.info("=== Initializing AnimeCog ===")
@@ -27,8 +28,26 @@ class AnimeCog(BaseAnimeCog):
             description="Get character images"
         )
         self.register_slash_commands()
-        self.setup_random_command()  # Add this line
+        self.setup_random_command()
         logger.info("AnimeCog initialization complete")
+
+
+    def has_valid_images(self, char_folder: str) -> bool:
+        """Check if character folder exists and contains valid images"""
+        try:
+            dir_path = Path(self.root_dir) / char_folder
+            if not dir_path.exists():
+                return False
+
+            valid_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
+            return any(
+                f.suffix.lower() in valid_extensions
+                for f in dir_path.iterdir()
+                if f.is_file() and not f.name.startswith('.')
+            )
+        except Exception as e:
+            logger.error(f"Error checking images for {char_folder}: {e}")
+            return False
 
     def load_all_characters(self):
         """Load all character mappings with their unique descriptions"""
@@ -56,7 +75,7 @@ class AnimeCog(BaseAnimeCog):
                         desc_data=descriptions[char_id],
                         mapping_data={char_id: mapping_data[char_id]}
                     )
-                    if char_info:
+                    if char_info and self.has_valid_images(char_info.folder):
                         # Store with normalized series name in unique ID
                         unique_id = f"{normalized_source}:{char_id.lower()}"
                         self.characters[unique_id] = char_info
@@ -270,13 +289,12 @@ class AnimeCog(BaseAnimeCog):
                     options = interaction.data.get('options', [])
                     logger.debug(f"Raw interaction options: {options}")
 
+                elif hasattr(interaction, 'data'):
+                    options = interaction.data.get('options', [])
                     for option in options:
-                        if isinstance(option, dict):
-                            logger.debug(f"Processing option: {option}")
-                            if option.get('name') == 'series':
-                                selected_series = option.get('value')
-                                logger.info(f"Found selected series from options: '{selected_series}'")
-                                break
+                        if isinstance(option, dict) and option.get('name') == 'series':
+                            selected_series = option.get('value')
+                            break
 
                 if not selected_series:
                     logger.warning("No series selected in autocomplete")
@@ -289,9 +307,10 @@ class AnimeCog(BaseAnimeCog):
                 choices = []
                 for char in series_chars:
                     if not current or current.lower() in char.title.lower():
-                        choice = app_commands.Choice(name=char.title, value=char.title)
-                        choices.append(choice)
-                        logger.debug(f"Added character choice: '{char.title}'")
+                        if self.has_valid_images(char.folder):
+                            choice = app_commands.Choice(name=char.title, value=char.title)
+                            choices.append(choice)
+                            logger.debug(f"Added character choice: '{char.title}'")
 
                 # Sort and return choices
                 choices.sort(key=lambda x: x.name)
