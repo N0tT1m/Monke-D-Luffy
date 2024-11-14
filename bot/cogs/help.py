@@ -57,7 +57,7 @@ class CharacterHelpCog(commands.Cog, name="Help Commands"):
             app_commands.Choice(name="Lycoris Recoil", value="lycoris_recoil"),
             app_commands.Choice(name="Hatsune Miku", value="hatsune_miku"),
             app_commands.Choice(name="League of Legends", value="league_of_legends"),
-            app_commands.Choice(name="Dota 2", value="dota2"),
+            app_commands.Choice(name="Dota 2", value="dota2"),  # Fixed display name
             app_commands.Choice(name="Pokemon", value="pokemon")
         ])
         async def show_series(interaction: discord.Interaction, series_name: str, page: int = 1):
