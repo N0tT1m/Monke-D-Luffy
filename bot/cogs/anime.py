@@ -64,12 +64,13 @@ class AnimeCog(BaseAnimeCog):
             return
 
         for source, descriptions in CHARACTER_DESCRIPTIONS.items():
-            if source not in CHARACTER_MAPPINGS:
+            normalized_source = self.normalize_series_name(source)
+            mapping_data = CHARACTER_MAPPINGS.get(source, {})
+
+            if not mapping_data:
                 logger.warning(f"No mapping data found for {source}, skipping")
                 continue
 
-            mapping_data = CHARACTER_MAPPINGS[source]
-            normalized_source = self.normalize_series_name(source)
             logger.info(f"Loading characters for {source} (normalized: {normalized_source})")
 
             # Collect all unique character IDs
@@ -97,13 +98,13 @@ class AnimeCog(BaseAnimeCog):
                         mapping_data=char_mapping
                     )
 
-                    if char_info and self.has_valid_images(char_info.folder):
+                    if char_info:
                         unique_id = f"{normalized_source}:{char_id.lower()}"
                         self.characters[unique_id] = char_info
                         loaded_characters += 1
                         logger.debug(f"Loaded character {unique_id} -> {char_info.title}")
                     else:
-                        logger.warning(f"Failed to load or validate character {char_id} from {source}")
+                        logger.warning(f"Failed to load character {char_id} from {source}")
 
                 except Exception as e:
                     logger.error(f"Error loading character {char_id} from {source}: {e}")
@@ -143,6 +144,7 @@ class AnimeCog(BaseAnimeCog):
 
         return series_chars
 
+    # Also remove the has_valid_images check from find_character and other methods
     def find_character(self, series: str, character_name: str) -> Optional[CharacterInfo]:
         """Find a specific character by series and name"""
         normalized_series = self.normalize_series_name(series)
@@ -327,10 +329,9 @@ class AnimeCog(BaseAnimeCog):
                 choices = []
                 for char in series_chars:
                     if not current or current.lower() in char.title.lower():
-                        if self.has_valid_images(char.folder):
-                            choice = app_commands.Choice(name=char.title, value=char.title)
-                            choices.append(choice)
-                            logger.debug(f"Added character choice: '{char.title}'")
+                        choice = app_commands.Choice(name=char.title, value=char.title)
+                        choices.append(choice)
+                        logger.debug(f"Added character choice: '{char.title}'")
 
                 # Sort and return choices
                 choices.sort(key=lambda x: x.name)
