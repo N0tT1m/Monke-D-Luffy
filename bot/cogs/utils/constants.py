@@ -39,7 +39,7 @@ CHARACTER_MAPPINGS = {
         "isuka": ["isuka", "isuka_(one_piece)"]
     },
 
-    "dota2": {
+    "dota_2": {
         "lina": ["lina", "lina inverse"],
         "crystal_maiden": ["crystal maiden", "crystal_maiden", "rylai"],
         "invoker": ["invoker", "kael"],
