@@ -162,45 +162,25 @@ class AnimeCog(BaseAnimeCog):
 
         return series_chars
 
-    # Also remove the has_valid_images check from find_character and other methods
     def find_character(self, series: str, character_name: str) -> Optional[CharacterInfo]:
         """Find a specific character by series and name"""
-        logger.debug(f"find_character called with series: '{series}', character_name: '{character_name}'")
-
         normalized_series = self.normalize_series_name(series)
         normalized_name = character_name.lower()
 
-        logger.debug(f"Normalized values - series: '{normalized_series}', name: '{normalized_name}'")
-
-        # Debug print available characters
-        logger.debug(f"Available character keys: {list(self.characters.keys())}")
-
         # First try exact match with unique ID
         unique_id = f"{normalized_series}:{normalized_name}"
-        logger.debug(f"Trying to find exact match with unique_id: '{unique_id}'")
-
         if unique_id in self.characters:
-            logger.debug(f"Found exact match for {unique_id}")
             return self.characters[unique_id]
-        else:
-            logger.debug(f"No exact match found for {unique_id}")
 
         # Then try matching by title
-        logger.debug(f"Getting all characters for series {normalized_series}")
         series_chars = self.get_characters_for_series(series)
-        logger.debug(f"Found {len(series_chars)} characters for series")
-
         for char in series_chars:
-            logger.debug(f"Checking character - title: '{char.title}', aliases: {char.aliases}")
             if char.title.lower() == normalized_name:
-                logger.debug(f"Found match by title: {char.title}")
                 return char
             # Also check aliases
             if any(alias.lower() == normalized_name for alias in char.aliases):
-                logger.debug(f"Found match by alias in character: {char.title}")
                 return char
 
-        logger.debug(f"No character found for {normalized_series}:{normalized_name}")
         return None
 
     def setup_random_command(self):
