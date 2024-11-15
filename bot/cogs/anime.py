@@ -32,27 +32,13 @@ class AnimeCog(BaseAnimeCog):
         self.setup_random_command()
         logger.info("AnimeCog initialization complete")
 
-    def has_valid_images(self, char_folder: str) -> bool:
-        """Check if character folder exists and contains valid images"""
-        try:
-            dir_path = self.root_dir / char_folder
-            if not dir_path.exists():
-                return False
-
-            valid_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
-            return any(
-                f.suffix.lower() in valid_extensions
-                for f in dir_path.iterdir()
-                if f.is_file() and not f.name.startswith('.')
-            )
-        except Exception as e:
-            logger.error(f"Error checking images for {char_folder}: {e}")
-            return False
-
     def load_all_characters(self):
         """Load all character mappings with their unique descriptions"""
         logger.info("Starting character loading")
-        logger.debug(f"Available series in CHARACTER_DESCRIPTIONS: {list(CHARACTER_DESCRIPTIONS.keys())}")
+
+        # Debug print the available data
+        logger.debug(f"CHARACTER_MAPPINGS keys: {list(CHARACTER_MAPPINGS.keys())}")
+        logger.debug(f"CHARACTER_DESCRIPTIONS keys: {list(CHARACTER_DESCRIPTIONS.keys())}")
 
         self.characters = {}
         total_characters = 0
@@ -63,15 +49,31 @@ class AnimeCog(BaseAnimeCog):
             logger.error("CHARACTER_DESCRIPTIONS or CHARACTER_MAPPINGS is empty")
             return
 
+        # Try loading Dota 2 specifically first
+        dota_source = 'dota2'
+        logger.debug(f"Looking for Dota 2 in mappings: {dota_source in CHARACTER_MAPPINGS}")
+        logger.debug(f"Looking for Dota 2 in descriptions: {dota_source in CHARACTER_DESCRIPTIONS}")
+
+        if dota_source in CHARACTER_MAPPINGS:
+            dota_chars = CHARACTER_MAPPINGS[dota_source]
+            logger.debug(f"Found Dota 2 characters in mappings: {list(dota_chars.keys())}")
+
         for source, descriptions in CHARACTER_DESCRIPTIONS.items():
             normalized_source = self.normalize_series_name(source)
-            mapping_data = CHARACTER_MAPPINGS.get(source, {})
+            logger.info(f"Loading characters for {source} (normalized: {normalized_source})")
+
+            # Get mapping data using both original and normalized source
+            mapping_data = CHARACTER_MAPPINGS.get(normalized_source, CHARACTER_MAPPINGS.get(source, {}))
 
             if not mapping_data:
-                logger.warning(f"No mapping data found for {source}, skipping")
+                logger.warning(f"No mapping data found for {source} or {normalized_source}, skipping")
                 continue
 
-            logger.info(f"Loading characters for {source} (normalized: {normalized_source})")
+            # Log specific info for Dota 2
+            if normalized_source == 'dota2' or source == 'dota2':
+                logger.debug(f"Processing Dota 2 - source: {source}")
+                logger.debug(f"Descriptions: {list(descriptions.keys())}")
+                logger.debug(f"Mapping data: {list(mapping_data.keys())}")
 
             # Collect all unique character IDs
             all_char_ids = set(descriptions.keys()) | set(mapping_data.keys())
@@ -82,9 +84,9 @@ class AnimeCog(BaseAnimeCog):
                     # Get description data with fallback
                     desc_data = descriptions.get(char_id)
                     if not desc_data:
-                        # Try to construct basic description from mapping
                         if char_id in mapping_data:
                             desc_data = (char_id.title(), f"Character from {source}")
+                            logger.debug(f"Created fallback description for {char_id}")
                         else:
                             continue
 
@@ -93,7 +95,7 @@ class AnimeCog(BaseAnimeCog):
 
                     char_info = create_character_info(
                         char_id=char_id,
-                        source=source,
+                        source=normalized_source,
                         desc_data=desc_data,
                         mapping_data=char_mapping
                     )
@@ -102,9 +104,10 @@ class AnimeCog(BaseAnimeCog):
                         unique_id = f"{normalized_source}:{char_id.lower()}"
                         self.characters[unique_id] = char_info
                         loaded_characters += 1
-                        logger.debug(f"Loaded character {unique_id} -> {char_info.title}")
+                        if normalized_source == 'dota2':
+                            logger.debug(f"Successfully loaded Dota 2 character: {unique_id}")
                     else:
-                        logger.warning(f"Failed to load character {char_id} from {source}")
+                        logger.warning(f"Failed to create character info for {char_id} from {source}")
 
                 except Exception as e:
                     logger.error(f"Error loading character {char_id} from {source}: {e}")
@@ -112,6 +115,21 @@ class AnimeCog(BaseAnimeCog):
 
         logger.info(f"Loaded {loaded_characters}/{total_characters} total characters")
 
+        # Debug print final loaded characters
+        loaded_series = set(unique_id.split(':')[0] for unique_id in self.characters.keys())
+        logger.debug(f"Loaded series: {loaded_series}")
+
+        # Print specifically which Dota 2 characters were loaded
+        dota_chars = [char_info for uid, char_info in self.characters.items() if uid.startswith('dota2:')]
+        logger.debug(f"Loaded Dota 2 characters: {[char.title for char in dota_chars]}")
+
+        # Debug print final loaded characters
+        loaded_series = set(unique_id.split(':')[0] for unique_id in self.characters.keys())
+        logger.debug(f"Loaded series: {loaded_series}")
+
+        # Print specifically which Dota 2 characters were loaded
+        dota_chars = [char_info for uid, char_info in self.characters.items() if uid.startswith('dota2:')]
+        logger.debug(f"Loaded Dota 2 characters: {[char.title for char in dota_chars]}")
     def normalize_series_name(self, series: str) -> str:
         """Normalize series name for consistent matching"""
         if not series:
@@ -119,7 +137,7 @@ class AnimeCog(BaseAnimeCog):
             return ""
 
         # Handle special case for dota2
-        if series.lower() in ['dota2', 'dota 2']:
+        if series.lower() in ['dota2', 'dota 2', 'dota_2']:
             return 'dota2'
 
         normalized = series.lower().replace(' ', '_').strip()
@@ -147,23 +165,42 @@ class AnimeCog(BaseAnimeCog):
     # Also remove the has_valid_images check from find_character and other methods
     def find_character(self, series: str, character_name: str) -> Optional[CharacterInfo]:
         """Find a specific character by series and name"""
+        logger.debug(f"find_character called with series: '{series}', character_name: '{character_name}'")
+
         normalized_series = self.normalize_series_name(series)
         normalized_name = character_name.lower()
 
+        logger.debug(f"Normalized values - series: '{normalized_series}', name: '{normalized_name}'")
+
+        # Debug print available characters
+        logger.debug(f"Available character keys: {list(self.characters.keys())}")
+
         # First try exact match with unique ID
         unique_id = f"{normalized_series}:{normalized_name}"
+        logger.debug(f"Trying to find exact match with unique_id: '{unique_id}'")
+
         if unique_id in self.characters:
+            logger.debug(f"Found exact match for {unique_id}")
             return self.characters[unique_id]
+        else:
+            logger.debug(f"No exact match found for {unique_id}")
 
         # Then try matching by title
+        logger.debug(f"Getting all characters for series {normalized_series}")
         series_chars = self.get_characters_for_series(series)
+        logger.debug(f"Found {len(series_chars)} characters for series")
+
         for char in series_chars:
+            logger.debug(f"Checking character - title: '{char.title}', aliases: {char.aliases}")
             if char.title.lower() == normalized_name:
+                logger.debug(f"Found match by title: {char.title}")
                 return char
             # Also check aliases
             if any(alias.lower() == normalized_name for alias in char.aliases):
+                logger.debug(f"Found match by alias in character: {char.title}")
                 return char
 
+        logger.debug(f"No character found for {normalized_series}:{normalized_name}")
         return None
 
     def setup_random_command(self):
