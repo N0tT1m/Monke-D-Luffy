@@ -558,6 +558,30 @@ CHARACTER_DESCRIPTIONS = {
         "isuka": ("Isuka", "The Nailing Marine and Former Instructor")
     },
 
+    # Add this to CHARACTER_DESCRIPTIONS
+    "dota2": {
+        "lina": ("Lina", "The Slayer, master of Dragon Slave and Laguna Blade"),
+        "crystal_maiden": ("Crystal Maiden", "The Rylai, Frost Nova specialist"),
+        "invoker": ("Invoker", "The Arsenal Magus, master of magical orbs"),
+        "windrunner": ("Windrunner", "The Lyralei, master archer of the woods"),
+        "marci": ("Marci", "The loyal companion with incredible strength"),
+        "dark_willow": ("Dark Willow", "The mischievous fae wielding shadow magic"),
+        "mirana": ("Mirana", "The Princess of the Moon, rider of Sagan"),
+        "broodmother": ("Broodmother", "The Black Arachnia, mother of spiderlings"),
+        "dawnbreaker": ("Dawnbreaker", "The Valora, celestial warrior"),
+        "death_prophet": ("Death Prophet", "The Krobelus, speaker to spirits"),
+        "enchantress": ("Enchantress", "The Aiushtha, guardian of the forest"),
+        "legion_commander": ("Legion Commander", "The Tresdin, duelist supreme"),
+        "luna": ("Luna", "The Moon Rider, mounted warrior of the night"),
+        "naga_siren": ("Naga Siren", "The Slithice, siren of the sea"),
+        "phantom_assassin": ("Phantom Assassin", "The Mortred, master of critical strikes"),
+        "queen_of_pain": ("Queen of Pain", "The Akasha, demonic assassin"),
+        "snapfire": ("Snapfire", "The Beatrix Snapfire, cookie-baking dragon rider"),
+        "spectre": ("Spectre", "The Mercurial, phantom of vengeance"),
+        "templar_assassin": ("Templar Assassin", "The Lanaya, keeper of secrets"),
+        "vengeful_spirit": ("Vengeful Spirit", "The Shendelzare, fallen princess")
+    },
+
     "naruto": {
         "tsunade_senju": ("Tsunade Senju", "The Fifth Hokage and Legendary Sannin"),
         "sakura_haruno": ("Sakura Haruno", "The Strongest Medical Ninja and Student of Tsunade"),
